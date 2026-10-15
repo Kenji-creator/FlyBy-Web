@@ -1,0 +1,117 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mesa",
+        "category": "core"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.8314302884615,
+          33.4151759154873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gilbert",
+        "category": "core"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.789027,
+          33.3528264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Apache Junction",
+        "category": "core"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.5500532,
+          33.414911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chandler",
+        "category": "core"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.8412502,
+          33.3061605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queen Creek",
+        "category": "core"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6377055,
+          33.2485715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tempe",
+        "category": "core"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.9400054,
+          33.4255104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scottsdale",
+        "category": "travel-confirmed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.9216734,
+          33.4948764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Phoenix",
+        "category": "travel-confirmed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0725488,
+          33.4482948
+        ]
+      }
+    }
+  ]
+}

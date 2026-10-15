@@ -1,0 +1,13 @@
+/* Keep a real two-page spread at compact widths; the curl uses half the stage. */
+@media(max-width:700px){
+.portfolio-screen .book-spread{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1fr}
+.portfolio-screen .book-page{padding:14px 12px}.portfolio-screen .book-image{padding:0}
+.portfolio-screen .book-page h2{font-size:clamp(18px,4vw,24px);line-height:1.12;margin:8px 0}
+.portfolio-screen .book-page p{font-size:11px;line-height:1.45;margin:6px 0}
+.portfolio-screen .book-page .eyebrow{font-size:8px;letter-spacing:.08em}
+.portfolio-screen .page-folio{left:12px;bottom:7px;font-size:8px}
+.portfolio-screen .book-placeholder>span:not(.page-folio){font-size:30px}.portfolio-screen .book-placeholder h3{font-size:18px}
+.portfolio-screen .curl-layer{display:block}.portfolio-screen .book-corner{display:block;width:44px;height:44px}.portfolio-screen .book-corner:disabled{display:none}
+.portfolio-screen .curl-content.book-page{height:100%;min-height:0}.portfolio-screen .curl-content.book-image{padding:0}
+}
+@media(prefers-reduced-motion:reduce){.portfolio-screen .curl-layer{display:none}}

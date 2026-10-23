@@ -1,0 +1,103 @@
+(() => {
+  const key = "flyby-blair-flight";
+  let state = null,
+    ghost = null;
+  try {
+    state = JSON.parse(sessionStorage.getItem(key) || "null");
+    if (
+      !state ||
+      Date.now() - state.at > 15000 ||
+      new URL(state.href, location.href).pathname !== location.pathname
+    ) {
+      sessionStorage.removeItem(key);
+      state = null;
+    }
+  } catch {
+    state = null;
+  }
+  if (state) document.documentElement.dataset.blairArrival = "true";
+  function point() {
+    return {
+      x: Math.max(8, Math.min(innerWidth - 76, Number(state?.x) || 8)),
+      y: Math.max(8, Math.min(innerHeight - 76, Number(state?.y) || 8)),
+    };
+  }
+  function mount() {
+    if (!state || ghost || !document.body) return;
+    const p = point();
+    ghost = document.createElement("div");
+    ghost.className = "pip-walker blair-handoff-ghost pointing";
+    ghost.setAttribute("aria-hidden", "true");
+    ghost.innerHTML = window.FlyByBlairSVG || "";
+    ghost.style.left = p.x + "px";
+    ghost.style.top = p.y + "px";
+    document.body.append(ghost);
+    document.body.classList.add("helper-guiding");
+  }
+  if (state) {
+    const observer = new MutationObserver(() => {
+      if (document.body) {
+        mount();
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.documentElement, { childList: true });
+    mount();
+    addEventListener("pageshow", mount);
+    setTimeout(() => {
+      if (state) {
+        ghost?.remove();
+        delete document.documentElement.dataset.blairArrival;
+        document.body?.classList.remove("helper-guiding");
+        state = null;
+        try {
+          sessionStorage.removeItem(key);
+        } catch {}
+      }
+    }, 12000);
+  }
+  window.FlyByBlairHandoff = {
+    pending: () => Boolean(state),
+    take(el) {
+      if (!state) return null;
+      const p = point();
+      el.style.left = p.x + "px";
+      el.style.top = p.y + "px";
+      ghost?.remove();
+      ghost = null;
+      state = null;
+      delete document.documentElement.dataset.blairArrival;
+      try {
+        sessionStorage.removeItem(key);
+      } catch {}
+      return p;
+    },
+    save(el, href, topic) {
+      const r = el.getBoundingClientRect();
+      try {
+        sessionStorage.setItem(
+          key,
+          JSON.stringify({
+            x: r.left,
+            y: r.top,
+            href: new URL(href, location.href).href,
+            topic,
+            at: Date.now(),
+          }),
+        );
+        return true;
+      } catch {
+        return false;
+      }
+    },
+    clear() {
+      state = null;
+      ghost?.remove();
+      ghost = null;
+      delete document.documentElement.dataset.blairArrival;
+      try {
+        sessionStorage.removeItem(key);
+      } catch {}
+    },
+  };
+})();

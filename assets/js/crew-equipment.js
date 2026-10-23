@@ -1,0 +1,26 @@
+(() => {
+  document.querySelectorAll("[data-equipment-open]").forEach((link) =>
+    link.addEventListener("click", (event) => {
+      const dialog = document.getElementById(link.dataset.equipmentOpen);
+      if (!dialog?.showModal) return;
+      event.preventDefault();
+      dialog.showModal();
+    }),
+  );
+  document.querySelectorAll(".crew-equipment-dialog").forEach((dialog) => {
+    dialog
+      .querySelector("[data-equipment-close]")
+      .addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => {
+      if (event.target !== dialog) return;
+      const r = dialog.getBoundingClientRect();
+      if (
+        event.clientX < r.left ||
+        event.clientX > r.right ||
+        event.clientY < r.top ||
+        event.clientY > r.bottom
+      )
+        dialog.close();
+    });
+  });
+})();

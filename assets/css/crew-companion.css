@@ -1,0 +1,47 @@
+.crew-companion-page .pip-launcher {
+  visibility: visible !important;
+}
+.crew-companion-page .pip-launcher > .pip-mascot {
+  display: none;
+}
+.crew-companion-page .pip-nest {
+  display: block;
+  width: 80px;
+  height: 70px;
+  overflow: visible;
+  filter: drop-shadow(0 5px 5px #09294e15);
+  transform-origin: 50% 80%;
+  transition: transform 0.3s ease;
+}
+.crew-companion-page .pip-launcher:hover .pip-nest {
+  transform: rotate(-4deg) translateY(-2px);
+}
+.crew-companion-page .pip-launcher:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+.crew-companion-page .pip-panel {
+  z-index: 35;
+}
+@media (max-width: 600px) {
+  .crew-companion-page .pip-nest {
+    width: 66px;
+    height: 62px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crew-companion-page .pip-nest {
+    transition: none;
+  }
+  .crew-companion-page .pip-launcher:hover .pip-nest {
+    transform: none;
+  }
+}
+.blair-paused.crew-companion-page .pip-launcher:hover .pip-nest {
+  transform: none;
+}
+
+.crew-companion-page .pip-launcher > span {
+  display: block !important;
+}

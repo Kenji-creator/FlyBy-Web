@@ -1,0 +1,389 @@
+window.FlyByChinese = {
+  Menu: "菜单",
+  Services: "服务",
+  Portfolio: "作品集",
+  Pricing: "报价",
+  FAQ: "常见问题",
+  Privacy: "隐私",
+  Home: "住宅",
+  Land: "土地",
+  Name: "姓名",
+  Email: "电子邮箱",
+  Notes: "备注",
+  Total: "总计",
+  FlyBy: "FlyBy",
+  "Rey M.": "Rey M.",
+  "Rey M. · FlyBy": "Rey M. · FlyBy",
+  Mesa: "Mesa",
+  Gilbert: "Gilbert",
+  Chandler: "Chandler",
+  Tempe: "Tempe",
+  "Apache Junction": "Apache Junction",
+  "Queen Creek": "Queen Creek",
+  Scottsdale: "Scottsdale",
+  Phoenix: "Phoenix",
+  "Mesa, Arizona": "Mesa, Arizona",
+  "Meet the Crew": "认识团队",
+  "Meet the": "认识",
+  "Crew.": "团队。",
+  "Meet your creator.": "认识您的影像创作者。",
+  "03 · Meet the Crew": "03 · 认识团队",
+  "01 · Services": "01 · 服务",
+  "02 · Portfolio": "02 · 作品集",
+  "04 · Estimate": "04 · 报价",
+  "01 · The rooms": "01 · 房间",
+  "02 · The connections": "02 · 空间连接",
+  "03 · The setting": "03 · 周边环境",
+  "Explore FlyBy": "探索 FlyBy",
+  "Footer navigation": "页脚导航",
+  "Your next step": "下一步",
+  "Get an estimate": "获取报价",
+  "Ask the FlyBy Crew →": "咨询 FlyBy 团队 →",
+  "Ask Rey a question →": "咨询 FlyBy 团队 →",
+  "Property media in Mesa, Arizona.": "Mesa, Arizona 房地产影像服务。",
+  "Service area": "服务区域",
+  "Request a Shoot ↗": "提交影像需求 ↗",
+  "Build Your Package ↗": "组合您的服务 ↗",
+  "Customize Your Package ↗": "自选服务组合 ↗",
+  "Continue with This Estimate ↗": "继续使用此报价 ↗",
+  "Continue with My Estimate": "继续使用我的报价",
+  "Contact Me with Answers": "联系我并解答问题",
+  "Request a custom quote": "申请定制报价",
+  "Request a Custom Quote →": "申请定制报价 →",
+  "Request a Reply →": "请求回复 →",
+  "Choose a Delivery Date →": "选择交付日期 →",
+  "Change Delivery Date →": "修改交付日期 →",
+  "Review My Request →": "查看我的申请 →",
+  "Send Media Request ↗": "发送影像需求 ↗",
+  "Edit Property & Services in Pricing →": "到报价页修改房产及服务 →",
+  "Edit Property Details →": "修改房产信息 →",
+  "View the Portfolio →": "查看作品集 →",
+  "Explore the Services →": "探索服务 →",
+  "Choose Photography →": "选择房产摄影 →",
+  "Discuss Your Property ↗": "咨询您的房产需求 ↗",
+  "See all services and pricing →": "查看全部服务与报价 →",
+  "Talk with Rey →": "联系 FlyBy 团队 →",
+  "Back to Home": "返回首页",
+  "Read the FAQ": "阅读常见问题",
+  "Customer Reviews →": "客户评价 →",
+  "Just have a question? Contact FlyBy →": "只想咨询？联系 FlyBy →",
+  "A better perspective on every property.": "让每一处房产呈现更好的视角。",
+  "A better perspective.": "一个更好的视角。",
+  "A perspective worth turning to.": "值得细细翻看的视角。",
+  "A room’s character. The way spaces connect. The view beyond the lot. Explore the media that helps tell your property’s story.":
+    "房间的特色、空间之间的连接，以及地块之外的景色。用影像讲述您房产的故事。",
+  "Show the rooms, the way spaces connect, and the setting around a property. Photography, 360° panoramic walkthroughs, and aerial media for agents, land brokers, and property sellers.":
+    "展示房间、空间连接及周边环境。为经纪人、土地中介和业主提供摄影、360°全景漫游及航拍影像。",
+  "Real estate photography & aerial media · Mesa, Arizona":
+    "房地产摄影与航拍影像 · Mesa, Arizona",
+  "Photography from $179 · Home-size pricing · Mesa & the East Valley":
+    "房产摄影 $179 起 · 按住宅面积报价 · Mesa 及 East Valley",
+  "Give every view": "让每个视角",
+  "a purpose.": "都有意义。",
+  "The property story, in three perspectives": "用三种视角讲述房产故事",
+  "Property story perspectives": "房产展示视角",
+  "Choose a perspective to see what it adds.": "选择一个视角，看看它能展示什么。",
+  "Every room.": "每个房间。",
+  "Every angle.": "每个角度。",
+  "Interior and exterior photos give buyers a clear look at rooms, light, and finishes.":
+    "室内外照片让买家清楚了解房间、采光和装修细节。",
+  "Find what you came for": "找到您需要的内容",
+  "Your next step,": "您的下一步，",
+  "made simple.": "更简单。",
+  "See what we offer.": "了解我们的服务。",
+  "Explore photography, panoramic walkthroughs, and aerial media.":
+    "探索房产摄影、全景漫游和航拍影像。",
+  "Preview the work.": "预览作品。",
+  "Turn through the property-media book and review the visual direction.":
+    "翻阅房产影像画册，了解视觉风格。",
+  "Get to know Rey M., the owner and person capturing your media.":
+    "认识负责人 Rey M.，也是目前为您拍摄影像的人。",
+  "Build your estimate.": "生成您的报价。",
+  "Enter your property size, choose services, or ask us a question.":
+    "输入房产面积、选择服务，或向我们咨询。",
+  "A simple path": "简单的流程",
+  "From listing plans to property media": "从挂牌计划到房产影像",
+  "Confirm the scope": "确认服务范围",
+  "Review availability, travel, and the final price manually.":
+    "由团队确认时间、出行安排和最终价格。",
+  "Request a delivery date": "提出交付日期",
+  "Share the location, access details, and when you need the finished media.":
+    "提供地址、进入房产的安排，以及您希望收到成品的日期。",
+  "Receive your media": "收到影像成品",
+  "Get edited deliverables for your listing marketing.": "获得用于房产营销的编辑成品。",
+  "Rooted in Mesa": "立足 Mesa",
+  "Our local perspective.": "我们的本地视角。",
+  "Explore the communities we serve. Select a location for travel details.":
+    "探索服务社区，选择地点查看出行说明。",
+  "Core service communities": "主要服务社区",
+  "Core service community": "主要服务社区",
+  "Travel confirmed during quoting": "出行安排在报价时确认",
+  "Illustrative FlyBy service area map": "FlyBy 服务区域示意图",
+  "Illustrative community map. Highlights are approximate and do not show municipal boundaries, guaranteed coverage, or a 25-mile driving zone. Nearby communities can be discussed during quoting.":
+    "社区示意图。标示仅为大致范围，不代表行政边界、保证覆盖范围或25英里驾车区域。附近社区可在报价时讨论。",
+  "Homes and land in Mesa are within our service area. Included travel is reviewed using the property’s actual location.":
+    "Mesa 的住宅和土地位于我们的服务区域。是否包含出行费用，以房产实际位置为准。",
+  "Travel within 25 driving miles of downtown Mesa is included. Additional travel is quoted before confirmation. A highlighted city does not guarantee included travel to every address.":
+    "包含距 Mesa 市中心25英里驾车范围内的出行。额外出行费用在确认前报价。城市被标示不代表其中每个地址都包含出行费用。",
+  "Explore the possibilities": "探索更多可能",
+  "The FlyBy portfolio book": "FlyBy 作品画册",
+  "Open the collection. Turn a page. See the spaces, details, and wider views that bring a property to life.":
+    "打开画册，翻过一页。看看让房产更生动的空间、细节和全景。",
+  "Preview edition — imagery is licensed reference material, not completed FlyBy work. Your best-work photos will replace these samples.":
+    "预览版：图片为获授权的参考素材，并非 FlyBy 已完成的作品。真实作品将替换这些示例。",
+  "Click a lower page corner, use the buttons, or focus the book and press ← / →. On mobile, swipe sideways. Home / End opens the first / last spread.":
+    "点击页面下角、使用按钮，或选中画册后按 ← / →。手机上可左右滑动。Home / End 键打开首尾跨页。",
+  "Jump to a chapter": "跳转章节",
+  "Previous portfolio spread": "上一跨页",
+  "Next portfolio spread": "下一跨页",
+  "← Previous": "← 上一页",
+  "Next →": "下一页 →",
+  "Portfolio chapter shortcuts": "作品集章节快捷入口",
+  "FlyBy portfolio flipbook": "FlyBy 翻页作品集",
+  "Enable JavaScript to flip through the book. Sample imagery is available below.":
+    "启用 JavaScript 即可翻阅画册。下方可查看示例图片。",
+  "Portfolio preview": "作品集预览",
+  "Reference images illustrate the visual direction. This is not a live tour, video, or completed FlyBy project.":
+    "参考图片展示视觉方向，并非真实漫游、视频或 FlyBy 已完成的项目。",
+  "Sample imagery · Unsplash": "示例图片 · Unsplash",
+  "Sample imagery: light-filled living room": "示例图片：明亮的客厅",
+  "Sample imagery: modern home": "示例图片：现代住宅",
+  "Four ways to show a property.": "四种房产展示方式。",
+  "Choose your media": "选择影像服务",
+  Photography: "房产摄影",
+  "Property Photography": "房产摄影",
+  "Panoramic tour": "全景漫游",
+  "Interactive 360° Tour": "互动360°全景漫游",
+  "360° Tours": "360°全景漫游",
+  "Aerial Photos": "航拍照片",
+  "Aerial Photography": "航拍摄影",
+  "Aerial Video": "航拍视频",
+  "Explore FlyBy services": "探索 FlyBy 服务",
+  "Find your perspective": "找到您的展示视角",
+  "What should buyers": "您希望买家",
+  "see first?": "先看到什么？",
+  "Choose your priority. We’ll suggest a starting package; you can freely change it.":
+    "选择最重要的展示目标，我们将建议一个起始组合，您可自由修改。",
+  "What are you marketing?": "您要推广什么？",
+  "What would you like to show?": "您想展示什么？",
+  "Your services — mix and match": "自由组合您的服务",
+  "Choose a starting mix here, then enter your property size and compare costs in Pricing.":
+    "在这里选择起始组合，再到报价页输入房产面积并比较费用。",
+  "Make it yours": "按您所需组合",
+  "Make the details easy to see.": "让细节一目了然。",
+  "Photos + Tour": "摄影 + 全景漫游",
+  "Photos + Aerial Photos": "摄影 + 航拍照片",
+  "Photos + Tour + Aerial Photos": "摄影 + 全景漫游 + 航拍照片",
+  "Complete Property Media": "完整房产影像组合",
+  "Simple, flexible pricing": "简单灵活的报价",
+  "Your property.": "您的房产。",
+  "Your package.": "您的服务组合。",
+  "Enter your home size for a custom sample quote. Choose two or more services to save 15% on the service subtotal.":
+    "输入住宅面积，获取对应的示例报价。选择两种或以上服务，可享服务小计85折。",
+  "Property type": "房产类型",
+  "Home square footage": "住宅面积（平方英尺）",
+  "Home square footage (optional)": "住宅面积（平方英尺，可选）",
+  "Parcel acreage": "地块面积（英亩）",
+  "Parcel acreage (optional)": "地块面积（英亩，可选）",
+  "Your sample quote": "您的示例报价",
+  "Original subtotal": "原服务小计",
+  "Bundle savings": "组合优惠",
+  "Sample service estimate before applicable tax and additional charges. Scope and price require manual confirmation.":
+    "服务示例报价未含适用税费和额外费用。范围和价格需由团队确认。",
+  "Select services and enter your property size.": "选择服务并输入房产面积。",
+  "Compare all home-size tiers": "比较各住宅面积档位",
+  "Proposed FlyBy rates before tax or additional charges":
+    "FlyBy 示例价格，未含税费或额外费用",
+  "Sample rates, subject to property review.": "示例价格，需根据房产情况确认。",
+  "Over 5,000 sq ft": "超过5,000平方英尺",
+  "Manual custom quote": "人工定制报价",
+  "Proposed sample rates pending property review and operational confirmation. Travel within 25 driving miles of downtown Mesa included; additional travel quoted before confirmation. Each aerial service covers one property up to two acres. Homes above 5,000 sq ft, parcels above two acres, additional panoramas, and complex projects require a custom quote. Tours include six months of hosting; extensions quoted before the included period ends. Applicable tax and extra charges disclosed before confirmation. The 15% discount applies to two or more different services for the same property and appointment, excludes travel, taxes, hosting extensions, and custom charges, and does not stack with promotions.":
+    "示例价格需根据房产和运营安排确认。包含 Mesa 市中心25英里驾车范围内的出行；额外出行在确认前报价。每项航拍服务适用于一处不超过两英亩的房产。超过5,000平方英尺的住宅、超过两英亩的地块、额外全景及复杂项目需定制报价。漫游包含六个月托管，延期在到期前报价。适用税费和额外费用在确认前说明。同一房产、同一次拍摄选择两种或以上不同服务可享服务小计85折；不含出行、税费、托管延期和定制费用，且不可叠加促销。",
+  "Tell us about your property": "告诉我们您的房产情况",
+  "Start with a": "开始您的",
+  "better perspective.": "更好视角。",
+  "Continue with your estimate, or ask us to contact you. You can add your question in Notes.":
+    "继续使用报价，或请我们联系您。可在备注中填写问题。",
+  "Step 1 of 3 · Property details. Share your estimate, choose a delivery deadline, and review your media request.":
+    "第1步，共3步 · 房产信息。确认报价、选择交付日期并查看影像需求。",
+  "How can we help?": "我们能如何帮助您？",
+  "Contact details": "联系信息",
+  "Phone (optional)": "电话（可选）",
+  "Property address or parcel location": "房产地址或地块位置",
+  "Selected services & sample estimate": "已选服务与示例报价",
+  "Your question (optional), access details, or anything you would like us to know.":
+    "您的问题（可选）、进入房产的安排，或其他希望我们了解的信息。",
+  "Complete an estimate in Pricing, or select Request a custom quote to unlock these fields.":
+    "请先在报价页完成估价，或选择“申请定制报价”以解锁这些字段。",
+  "Your estimate is ready. Add your contact details below.":
+    "报价已准备好，请在下方填写联系信息。",
+  "Describe your custom request in Notes. All other fields are optional.":
+    "请在备注中描述定制需求，其他字段均为可选。",
+  "Describe your custom request (required).": "请描述定制需求（必填）。",
+  "Describe your custom request in Notes before continuing.":
+    "继续前，请在备注中描述定制需求。",
+  "Optional: add an email or phone so Rey can send your response within 1 day.":
+    "可选：留下邮箱或电话，方便 FlyBy 团队在一天内回复您。",
+  "Add your name and email. Your question in Notes is optional. This request goes to FlyBy’s business email.":
+    "填写姓名和邮箱。备注中的问题为可选。申请将发往 FlyBy 商务邮箱。",
+  "Business email is not connected yet. This form cannot send your request.":
+    "商务邮箱尚未连接，此表单暂时无法发送申请。",
+  "Business email is not connected yet. This form cannot send your question.":
+    "商务邮箱尚未连接，此表单暂时无法发送问题。",
+  "Your custom quote request has been sent. You should receive a response within 1 day.":
+    "您的定制报价申请已发送，预计将在一天内收到回复。",
+  "Your question has been sent. You should receive an answer within 1 day.":
+    "您的问题已发送，预计将在一天内收到答复。",
+  "Your request could not be confirmed. Your details remain here; please try again later.":
+    "无法确认申请是否成功。您的信息仍保留在此，请稍后重试。",
+  "Sending your request…": "正在发送申请…",
+  "No request confirmation has been received.": "尚未收到申请成功的确认。",
+  "Browser session storage is unavailable. Your draft cannot be carried to the next page.":
+    "浏览器会话存储不可用，无法将草稿带到下一页。",
+  "Your draft could not be saved in this browser session.":
+    "无法在当前浏览器会话中保存草稿。",
+  "Start with your property details before choosing a date.":
+    "选择日期前，请先填写房产信息。",
+  "Choose services or request a custom quote before continuing.":
+    "继续前，请选择服务或申请定制报价。",
+  "Start in Pricing to enter your property type and size, or choose Contact Me with Answers.":
+    "请到报价页输入房产类型和面积，或选择“联系我并解答问题”。",
+  "Step 2 of 3 · Delivery deadline": "第2步，共3步 · 交付日期",
+  "Your media.": "您的影像。",
+  "Your deadline.": "您的交付日期。",
+  "Choose when you would like the finished media delivered. Rey will confirm the deadline and schedule the capture separately.":
+    "选择您希望收到影像成品的日期。FlyBy 团队将确认日期，并另行安排拍摄。",
+  "Requested media delivery date": "希望收到成品的日期",
+  "Select your requested media delivery date. Rey confirms the deadline and schedules the capture separately.":
+    "请选择希望收到成品的日期。FlyBy 团队将确认日期，并另行安排拍摄。",
+  "This is a requested delivery deadline, not a capture appointment or a guaranteed delivery date.":
+    "这是您提出的交付日期，并非拍摄预约或保证交付的日期。",
+  "Your property request": "您的房产影像需求",
+  "Rey reviews the scope, access, and delivery deadline, then schedules the capture with you.":
+    "FlyBy 团队将核对服务范围、进入安排和交付日期，再与您安排拍摄。",
+  "Previous month": "上个月",
+  "Next month": "下个月",
+  "Choose a requested media delivery date.": "请选择希望收到成品的日期。",
+  "Step 3 of 3 · Review your request": "第3步，共3步 · 查看申请",
+  "One clear view.": "清晰核对。",
+  "Before you send.": "发送之前。",
+  "Check your property, selected services, estimate, and requested delivery date.":
+    "核对房产、已选服务、报价和希望交付的日期。",
+  "Calendar requests are not connected yet. Your request has not been sent.":
+    "日历申请服务尚未连接，您的申请尚未发送。",
+  "Service estimates exclude applicable tax, additional travel, hosting extensions, and custom charges. Submitting a request does not confirm an appointment.":
+    "服务报价未含适用税费、额外出行、托管延期及定制费用。提交需求并不代表拍摄预约已确认。",
+  "Capture scheduling": "拍摄安排",
+  "Rey schedules the capture separately after reviewing your request.":
+    "FlyBy 团队审核您的需求后，将另行安排拍摄。",
+  "Review your request before sending. The delivery deadline is confirmed manually.":
+    "发送前请核对需求，交付日期由团队确认。",
+  "Your media request has been added to FlyBy’s calendar for review. The requested delivery date still needs confirmation; Rey will schedule the capture separately.":
+    "您的影像需求已加入 FlyBy 日历等待审核。交付日期仍需确认，FlyBy 团队将另行安排拍摄。",
+  "Home size": "住宅面积",
+  "Not provided": "未填写",
+  "Not selected": "未选择",
+  "Custom quote requested": "已申请定制报价",
+  "Contact request · estimate optional.": "联系申请 · 报价可选。",
+  "A few details": "了解一些细节",
+  "before we fly.": "再开始拍摄。",
+  "Good to know": "实用信息",
+  "Clear expectations for your property media.": "清楚了解您的房产影像服务。",
+  "How do panoramic walkthroughs work?": "全景漫游如何使用？",
+  "Look around rooms and move between linked panoramic viewpoints. No measured 3D model, dollhouse, floor plans, or automatic Zillow integration.":
+    "可环视房间并在相连的全景视点之间移动。不含带测量数据的3D模型、立体俯视模型、平面图或自动 Zillow 集成。",
+  "What does photography include?": "房产摄影包含什么？",
+  "25–40 edited interior/exterior photos depending on home size. Sample tiers are $179–$259 through 5,000 sq ft.":
+    "根据住宅面积，包含25至40张编辑后的室内外照片。5,000平方英尺以内的示例价格为 $179 至 $259。",
+  "How do bundle savings work?": "组合优惠如何计算？",
+  "Two or more different services for the same property and appointment receive 15% off the service subtotal. No single-service discount. Travel, tax, hosting extensions, and custom charges are excluded; promotions do not stack.":
+    "同一房产、同一次拍摄选择两种或以上不同服务，可享服务小计85折。单项服务不享此优惠。出行、税费、托管延期及定制费用不参与，且不可叠加其他促销。",
+  "What about larger properties?": "较大的房产如何报价？",
+  "Homes above 5,000 sq ft, parcels above two acres, additional panoramas, and complex projects need a custom quote. Land requests start with aerial services.":
+    "超过5,000平方英尺的住宅、超过两英亩的地块、额外全景及复杂项目需定制报价。土地项目从航拍服务开始。",
+  "What hosting is included?": "包含多久的托管？",
+  "Six months. Extensions are quoted before that period ends. A real sample tour and hosting provider must be confirmed before launch.":
+    "包含六个月。延期在到期前报价。正式上线前需确认真实漫游样例和托管服务商。",
+  "What about weather and flight availability?": "天气和可飞行条件如何影响拍摄？",
+  "Aerial work depends on suitable weather, safe conditions, and flight availability. Scheduling and changes are confirmed manually.":
+    "航拍取决于适宜天气、安全条件和可飞行情况。时间及变更由团队确认。",
+  "When will media arrive?": "多久收到影像？",
+  "Targets: photos within two business days; tours/video within three business days, pending operational confirmation.":
+    "预计照片在两个工作日内交付，漫游和视频在三个工作日内交付，具体以运营安排确认为准。",
+  "Are branded and unbranded options available?": "是否提供带品牌和不带品牌的版本？",
+  "Discuss branded and unbranded delivery options during project confirmation.":
+    "项目确认时可讨论带品牌和不带品牌的交付版本。",
+  "Are boundary overlays surveys?": "边界标注等同于测绘结果吗？",
+  "Any boundary overlays are illustrative, based on client-supplied information, and are not surveys.":
+    "边界标注仅为示意，基于客户提供的信息，并非测绘结果。",
+  "When will the media be delivered?": "影像将在何时交付？",
+  "You choose your requested media delivery date. Rey reviews the deadline and confirms it with you, then schedules the capture separately. The date is not a capture appointment or a delivery guarantee.":
+    "您提出希望收到成品的日期。FlyBy 团队将审核并与您确认，然后另行安排拍摄。该日期并非拍摄预约或交付保证。",
+  "Delivery targets: photos within two business days; tours and video within three business days, pending operational confirmation. Branded and unbranded options are discussed before the shoot.":
+    "预计照片在两个工作日内交付，漫游和视频在三个工作日内交付，具体需确认。带品牌或不带品牌版本在拍摄前讨论。",
+  "Customer experiences": "客户体验",
+  "What our customers": "我们的客户",
+  "are saying.": "怎么说。",
+  "Feedback from the people behind the properties.": "来自房产业主与相关客户的反馈。",
+  "Reviews coming soon": "客户评价即将呈现",
+  "Real experiences.": "真实体验。",
+  "In their own words.": "他们的亲身感受。",
+  "Verified customer reviews have not been added yet. This page will feature genuine FlyBy feedback once it is available and approved for publication.":
+    "目前尚未添加经过核实的客户评价。获得真实 FlyBy 客户反馈并获准发布后，将在此展示。",
+  "No sample testimonials or ratings are displayed.": "此处不展示虚构的评价或评分。",
+  "Owner & Real Estate Media Creator": "负责人兼房地产影像创作者",
+  "Rey M. with an orange drone hovering above an outstretched hand":
+    "Rey M.，橙色无人机悬停在伸出的手掌上方",
+  "I’m Rey M., the owner of FlyBy. For now, I’m also the person capturing the media, bringing the rooms, property layout, land, and surrounding context into view.":
+    "我是 Rey M.，FlyBy 的负责人。目前也由我亲自拍摄影像，展示房间、房产布局、土地和周边环境。",
+  "FlyBy is based in Mesa, Arizona. You’ll work directly with me to review the property, scope, and timing before the project is confirmed.":
+    "FlyBy 位于 Mesa, Arizona。项目确认前，您将直接与我讨论房产、服务范围和时间安排。",
+  "Your information.": "您的信息。",
+  "Privacy notice for the current preview.": "当前预览版的隐私说明。",
+  "Draft contact and property details, package selections, and the preferred date are kept in this browser’s session storage to carry the request between pages. They clear when the browser session ends. No request is sent while submission is unconnected. Contact details are not placed in page URLs.":
+    "联系和房产信息草稿、服务选择及日期保存在当前浏览器会话中，以便在页面间继续申请。会话结束后会清除。发送服务未连接时不会提交申请。联系信息不会放入页面网址。",
+  "Images and fonts load from Unsplash and Google Fonts, which receive ordinary browser requests. A verified business privacy policy is required before activating inquiries.":
+    "图片和字体来自 Unsplash 和 Google Fonts，会产生普通浏览器请求。启用实际咨询提交前需确认商务隐私政策。",
+  "Blair uses preset answers and does not use AI or send chat messages to an external service. Your conversation and last topic are kept in this browser session so guidance can continue between pages. Use Clear conversation in Blair’s panel to erase that chat history. Unknown questions can be carried into optional Contact Notes; they are not sent until a connected contact form is reviewed and submitted.":
+    "Blair 使用预设回答，不使用 AI，也不会将聊天消息发送给外部服务。对话和最近主题保存在当前浏览器会话中，以便跨页继续引导。可在 Blair 面板中点击“清除对话”删除聊天记录。无法解答的问题可带入联系表单的可选备注，只有在连接提交服务并由您提交后才会发送。",
+  "When connected, contact requests are sent to FlyBy’s business mailbox and media requests are added to a private Google Calendar for review. The media delivery date is a requested deadline; Rey confirms it and schedules the capture separately. No request is sent while that connection is unavailable.":
+    "连接服务后，联系申请将发送至 FlyBy 商务邮箱，影像需求将加入私人 Google 日历等待审核。交付日期是您提出的期限，FlyBy 团队将确认并另行安排拍摄。连接不可用时不会发送申请。",
+  "A home": "住宅",
+  "Start with what": "从最重要的",
+  "matters most.": "展示内容开始。",
+  "to your next perspective.": "您的下一个视角。",
+  "Skip animation and view service area ↓": "跳过动画，查看服务区域 ↓",
+  "e.g. 2750": "例如：2750",
+  "e.g. 1.5": "例如：1.5",
+  Spread: "跨页",
+  Cover: "封面",
+  Closing: "结尾",
+  "FlyBy Pricing | Mesa property media by square footage":
+    "FlyBy 报价 | Mesa 房产影像按面积报价",
+  "FlyBy Services | Photography, 360° tours & aerial media in Mesa":
+    "FlyBy 服务 | Mesa 摄影、360°漫游及航拍影像",
+  "FlyBy | Choose a shoot date": "FlyBy | 选择影像交付日期",
+  "FlyBy | Portfolio & digital gallery book": "FlyBy | 作品集与数字画册",
+  "FlyBy | Real estate photography & aerial media in Mesa, AZ":
+    "FlyBy | Mesa, Arizona 房地产摄影与航拍影像",
+  "FlyBy | Review your shoot request": "FlyBy | 核对影像需求",
+  "FlyBy | What our customers are saying": "FlyBy | 客户评价",
+  "FlyBy | faq": "FlyBy | 常见问题",
+  "FlyBy | privacy": "FlyBy | 隐私",
+  "Meet Rey M. | FlyBy Owner & Real Estate Media Creator":
+    "认识团队 | FlyBy 负责人兼房地产影像创作者",
+  "Request a FlyBy Shoot | Mesa real estate media":
+    "提交 FlyBy 影像需求 | Mesa 房产影像服务",
+  "Mesa real estate photography, 360° panoramic walkthroughs, aerial photos and video for homes and land. Explore services and build a sample quote by property size.":
+    "Mesa 房地产摄影、360°全景漫游、住宅及土地航拍照片和视频。探索服务并按房产面积生成示例报价。",
+  "Explore property photography, linked 360° panoramic tours, aerial photography and aerial video. Find a media package for homes or land in Mesa and the East Valley.":
+    "探索房产摄影、相连的360°全景漫游、航拍摄影和视频，为 Mesa 及 East Valley 的住宅或土地选择服务组合。",
+  "Compare FlyBy photography and panoramic-tour tiers by home size. Build a sample quote with aerial services and 15% savings on eligible multi-service appointments.":
+    "按住宅面积比较 FlyBy 摄影和全景漫游档位，组合航拍服务获取示例报价；符合条件的多项服务拍摄可享85折。",
+  "Meet Rey M., owner and real estate media creator behind FlyBy in Mesa, Arizona. Property photography, panoramic tours, and aerial media for homes and land.":
+    "认识 Rey M.，Mesa, Arizona 的 FlyBy 负责人及房地产影像创作者，为住宅和土地提供摄影、全景漫游及航拍影像。",
+  "Property photography, panoramic 360° tours and aerial media in Mesa, Arizona. Build a sample quote by square footage.":
+    "Mesa, Arizona 的房产摄影、360°全景漫游及航拍影像。按面积生成示例报价。",
+  "Share your property details and preferred shoot date. Sample quotes require manual review. The current inquiry form is a clearly labeled preview.":
+    "分享房产信息和希望交付影像的日期。示例报价需人工审核。当前咨询表单为明确标示的预览版。",
+};

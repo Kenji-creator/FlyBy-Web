@@ -1,0 +1,148 @@
+Object.assign(window.FlyBySpanish, {
+  "Real estate photography & aerial media · Mesa, Arizona":
+    "Fotografía inmobiliaria y contenido aéreo · Mesa, Arizona",
+  "Show the rooms, the way spaces connect, and the setting around a property. Photography, 360° panoramic walkthroughs, and aerial media for agents, land brokers, and property sellers.":
+    "Muestra las habitaciones, cómo se conectan los espacios y el entorno de una propiedad. Fotografía, recorridos panorámicos de 360° y contenido aéreo para agentes, corredores de terrenos y vendedores de propiedades.",
+  "View the Portfolio →": "Ver el portafolio →",
+  "Photography from $179 · Home-size pricing · Mesa & the East Valley":
+    "Fotografía desde $179 · Precios según el tamaño de la casa · Mesa y el East Valley",
+  "Sample rates, subject to property review. Portfolio imagery is labeled reference material until genuine FlyBy work is supplied.":
+    "Tarifas de ejemplo, sujetas a revisión de la propiedad. Las imágenes del portafolio se identifican como material de referencia hasta que se agreguen trabajos auténticos de FlyBy.",
+  "The property story, in three perspectives":
+    "La historia de la propiedad, en tres perspectivas",
+  "Give every view": "Dale a cada vista",
+  "a purpose.": "un propósito.",
+  "Explore the Services →": "Explorar los servicios →",
+  "Property story perspectives": "Perspectivas de la historia de la propiedad",
+  "01 · The rooms": "01 · Las habitaciones",
+  "02 · The connections": "02 · Las conexiones",
+  "03 · The setting": "03 · El entorno",
+  "Make the details easy to see.": "Haz que los detalles se vean con claridad.",
+  "Interior and exterior photos give buyers a clear look at rooms, light, and finishes.":
+    "Las fotos de interiores y exteriores ofrecen a los compradores una vista clara de las habitaciones, la luz y los acabados.",
+  "Choose Photography →": "Elegir fotografía →",
+  "Reference images illustrate the visual direction. This is not a live tour, video, or completed FlyBy project.":
+    "Las imágenes de referencia ilustran la dirección visual. No son un recorrido en vivo, un video ni un proyecto realizado por FlyBy.",
+  "Photos + Panoramic Tour": "Fotos + Recorrido panorámico",
+  "Help visitors connect the spaces.": "Ayuda a conectar los espacios.",
+  "Pair still photos with a linked panoramic walkthrough to show how rooms relate. This reference image is not a live tour.":
+    "Combina fotos fijas con un recorrido panorámico enlazado para mostrar la relación entre habitaciones. Esta imagen de referencia no es un recorrido en vivo.",
+  "Choose Photos + Tour →": "Elegir Fotos + Recorrido →",
+  "Give the setting its own story.": "Dale al entorno su propia historia.",
+  "Aerial media helps show land, views, and surrounding context. This landscape image illustrates the direction, not FlyBy aerial work.":
+    "El contenido aéreo ayuda a mostrar el terreno, las vistas y el contexto cercano. Esta imagen de paisaje ilustra la dirección visual, no un trabajo aéreo de FlyBy.",
+  "Choose Aerial Media →": "Elegir contenido aéreo →",
+  "Start with your property": "Empieza por tu propiedad",
+  "A media mix for": "Una combinación de contenido",
+  "the way you market.": "para tu forma de promocionar.",
+  "Real estate agents": "Agentes inmobiliarios",
+  "Present the home.": "Presenta la casa.",
+  "Explain the space.": "Explica el espacio.",
+  "Pair listing photography with linked panoramic viewpoints when the room connections matter.":
+    "Combina la fotografía del anuncio con puntos panorámicos enlazados cuando la conexión entre habitaciones sea importante.",
+  "Build a Home Package →": "Crear un paquete para casa →",
+  "Land brokers": "Corredores de terrenos",
+  "Show the parcel.": "Muestra el terreno.",
+  "Add the context.": "Añade el contexto.",
+  "Start with aerial photos and add a short aerial video. Parcels above two acres receive a custom quote.":
+    "Empieza con fotos aéreas y añade un video aéreo breve. Los terrenos de más de dos acres reciben una cotización personalizada.",
+  "Build a Land Package →": "Crear un paquete para terreno →",
+  "Property sellers": "Vendedores de propiedades",
+  "Start with photos.": "Empieza con fotos.",
+  "Build from there.": "Añade lo que necesites.",
+  "Choose the media your property needs and review the scope and price before confirming a shoot.":
+    "Elige el contenido que necesita tu propiedad y revisa el alcance y el precio antes de confirmar una sesión.",
+  "Start with Photography →": "Empezar con fotografía →",
+  "The FlyBy approach": "El enfoque FlyBy",
+  "Clear views.": "Vistas claras.",
+  "Clear choices.": "Decisiones claras.",
+  "Four perspectives": "Cuatro perspectivas",
+  "Photography, panoramic walkthroughs, aerial photos, and aerial video in one mix-and-match package.":
+    "Fotografía, recorridos panorámicos, fotos aéreas y video aéreo en un paquete que puedes combinar a tu gusto.",
+  "Transparent estimates": "Estimaciones transparentes",
+  "Home-size tiers and visible bundle savings. Extra travel and custom scope are quoted before confirmation.":
+    "Tarifas por tamaño de casa y ahorros por paquete visibles. El traslado adicional y los requisitos especiales se cotizan antes de confirmar.",
+  "Local context": "Contexto local",
+  "Mesa and nearby Arizona communities, with property location and travel reviewed for every project.":
+    "Mesa y comunidades cercanas de Arizona, con la ubicación y el traslado revisados en cada proyecto.",
+  "Manual confirmation": "Confirmación manual",
+  "Scope, availability, and final pricing are reviewed together. A request starts a conversation.":
+    "Revisamos juntos el alcance, la disponibilidad y el precio final. Una solicitud inicia una conversación.",
+  "An easy place to start": "Un punto de partida sencillo",
+  "See your services.": "Ve tus servicios.",
+  "See your estimate.": "Ve tu estimación.",
+  "25 edited interior and exterior photos.":
+    "25 fotos editadas de interiores y exteriores.",
+  "Price My Home →": "Cotizar mi casa →",
+  "25 photos, up to 12 linked viewpoints, and six months of tour hosting.":
+    "25 fotos, hasta 12 puntos de vista enlazados y seis meses de alojamiento del recorrido.",
+  "Save $49.20 with the 15% bundle discount.":
+    "Ahorra $49.20 con el descuento del 15% por paquete.",
+  "Customize This Package ↗": "Personalizar este paquete ↗",
+  "Examples cover homes up to 2,000 sq ft. Enter your size for other tiers. Estimated service subtotals exclude applicable tax, extra travel, hosting extensions, and custom charges. Two or more different services must be booked for the same property and appointment; promotions do not stack.":
+    "Los ejemplos cubren casas de hasta 2,000 pies cuadrados. Ingresa el tamaño para ver otras tarifas. Los subtotales estimados excluyen impuestos aplicables, traslado adicional, extensiones de alojamiento y cargos personalizados. Se deben reservar dos o más servicios diferentes para la misma propiedad y cita. Las promociones no se acumulan.",
+  "From listing plans to property media":
+    "Del plan del anuncio al contenido inmobiliario",
+  "A simple path": "Un camino sencillo",
+  "to your next perspective.": "hacia tu próxima perspectiva.",
+  "Choose your media": "Elige tu contenido",
+  "Select services and enter your property size.":
+    "Selecciona los servicios e ingresa el tamaño de la propiedad.",
+  "Request a date": "Solicita una fecha",
+  "Share the location, access details, and preferred timing.":
+    "Comparte la ubicación, los detalles de acceso y el horario preferido.",
+  "Confirm the scope": "Confirma el alcance",
+  "Review availability, travel, and the final price manually.":
+    "Revisa manualmente la disponibilidad, el traslado y el precio final.",
+  "Receive your media": "Recibe tu contenido",
+  "Get edited deliverables for your listing marketing.":
+    "Recibe el contenido editado para promocionar tu anuncio.",
+  "Delivery targets: photos within two business days; tours and video within three business days, pending operational confirmation. Branded and unbranded options are discussed before the shoot.":
+    "Plazos previstos: fotos en dos días hábiles; recorridos y video en tres días hábiles, sujetos a confirmación operativa. Las opciones con y sin marca se consultan antes de la sesión.",
+  "Your next property, in perspective": "Tu próxima propiedad, en perspectiva",
+  "What does your": "¿Qué necesita mostrar",
+  "property need to show?": "tu propiedad?",
+  "A sample estimate first. A manually confirmed project next.":
+    "Primero, una estimación de ejemplo. Después, un proyecto confirmado manualmente.",
+  "FlyBy | Real estate photography & aerial media in Mesa, AZ":
+    "FlyBy | Fotografía inmobiliaria y contenido aéreo en Mesa, Arizona",
+  "Mesa real estate photography, 360° panoramic walkthroughs, aerial photos and video for homes and land. Explore services and build a sample quote by property size.":
+    "Fotografía inmobiliaria, recorridos panorámicos de 360°, fotos y video aéreo para casas y terrenos en Mesa. Explora los servicios y crea una cotización de ejemplo según el tamaño.",
+  "FlyBy Services | Photography, 360° tours & aerial media in Mesa":
+    "Servicios FlyBy | Fotografía, recorridos de 360° y contenido aéreo en Mesa",
+  "Explore property photography, linked 360° panoramic tours, aerial photography and aerial video. Find a media package for homes or land in Mesa and the East Valley.":
+    "Explora fotografía inmobiliaria, recorridos panorámicos de 360° enlazados, fotografía y video aéreo. Encuentra un paquete para casas o terrenos en Mesa y el East Valley.",
+  "FlyBy Pricing | Mesa property media by square footage":
+    "Precios FlyBy | Contenido inmobiliario en Mesa por superficie",
+  "Compare FlyBy photography and panoramic-tour tiers by home size. Build a sample quote with aerial services and 15% savings on eligible multi-service appointments.":
+    "Compara las tarifas de fotografía y recorridos panorámicos por tamaño de casa. Crea una cotización de ejemplo con servicios aéreos y un 15% de ahorro en citas elegibles de varios servicios.",
+  "Request a FlyBy Shoot | Mesa real estate media":
+    "Solicita una sesión FlyBy | Contenido inmobiliario en Mesa",
+  "Share your property details and preferred shoot date. Sample quotes require manual review. The current inquiry form is a clearly labeled preview.":
+    "Comparte los detalles de la propiedad y la fecha preferida. Las cotizaciones de ejemplo requieren revisión manual. El formulario actual está identificado como vista previa.",
+});
+
+Object.assign(window.FlyBySpanish, {
+  "Help buyers see": "Ayuda a los compradores a ver",
+  "the whole property.": "toda la propiedad.",
+  "Photos that show the details. Panoramic tours that connect the rooms. Aerial media that puts the property in context. Real estate media for homes and land in Mesa and the East Valley.":
+    "Fotos que muestran los detalles. Recorridos panorámicos que conectan habitaciones. Contenido aéreo que muestra el entorno. Contenido inmobiliario para casas y terrenos en Mesa y East Valley.",
+  "Get My Estimate ↗": "Ver mi estimación ↗",
+  "Preview the Media →": "Ver ejemplos de contenido →",
+  "Give buyers": "Dales a los compradores",
+  "a clearer picture.": "una imagen más clara.",
+  "Choose the media that answers buyers’ biggest questions: what the rooms look like, how the spaces connect, and what surrounds the property.":
+    "Elige el contenido que responde las preguntas de los compradores: cómo son los espacios, cómo se conectan y qué rodea la propiedad.",
+  "Choose your services.": "Elige tus servicios.",
+  "See your estimate.": "Consulta tu estimación.",
+  "Enter your property size and select the media you need. Your sample total updates as you choose, with 15% bundle savings on two or more eligible services.":
+    "Ingresa el tamaño de tu propiedad y selecciona el contenido que necesitas. El total de ejemplo se actualiza con tu selección, con un 15% de ahorro al combinar dos o más servicios elegibles.",
+  "Tell us what you need.": "Cuéntanos qué necesitas.",
+  "We’ll help plan the media.": "Te ayudamos a planear el contenido.",
+  "Continue with your estimate to request a delivery date, describe a custom project, or ask the FlyBy Crew a question. Choose the path that fits your property.":
+    "Continúa con tu estimación para solicitar una fecha de entrega, describe un proyecto personalizado o haz una pregunta al equipo FlyBy. Elige lo que se ajuste a tu propiedad.",
+  "I’m Rey M., the owner and media creator behind FlyBy. I’ll help you choose the right views for your home or land—from room details to the surrounding setting.":
+    "Soy Rey M., propietario y creador de contenido de FlyBy. Te ayudo a elegir las vistas adecuadas para tu casa o terreno, desde los detalles de los espacios hasta el entorno.",
+  "You’ll work directly with me to review the property, choose services, and confirm your delivery deadline. One point of contact, with clear next steps.":
+    "Trabajarás directamente conmigo para revisar la propiedad, elegir servicios y confirmar la fecha de entrega. Un solo contacto y próximos pasos claros.",
+});

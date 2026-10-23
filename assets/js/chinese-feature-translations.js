@@ -1,0 +1,166 @@
+Object.assign(window.FlyByChinese, {
+  "Mesa, Arizona & surrounding communities": "Mesa, Arizona 及周边社区",
+  "Build Your Package": "组合您的服务",
+  "The FlyBy collection": "FlyBy 精选",
+  "Spaces with a story": "有故事的空间",
+  "Natural light. Thoughtful details. A clear sense of how a home lives.":
+    "自然光线、细致呈现，清晰展现住宅的生活氛围。",
+  "Inside. Outside. Connected.": "室内、室外，相互连接。",
+  "Show the relationship between indoor spaces and the setting around them.":
+    "展示室内空间与周边环境的联系。",
+  "Room to see more": "看见更广阔的空间",
+  "Put the landscape, views, and surrounding context into perspective.":
+    "从新的视角展示景观、视野及周边环境。",
+  "A sense of space": "空间感",
+  "A 360° panoramic walkthrough connects viewpoints so visitors can look around and move between rooms. A real sample tour will be added when supplied.":
+    "360°全景漫游连接各个视点，让访客环顾四周并在房间间移动。真实漫游样本将在提供后加入。",
+  "Your next perspective": "您的下一个视角",
+  "Build a package for your property, then request a date. Every project is reviewed and confirmed manually.":
+    "为房产组合服务，再提出交付日期。所有项目均需人工审核确认。",
+  "Tour preview placeholder": "漫游预览占位",
+  "Tour preview placeholder · Not interactive": "漫游预览占位 · 不可交互",
+  "A real tour has not been supplied. This page is a preview, not an interactive tour.":
+    "尚未提供真实漫游。本页为预览，不是交互式漫游。",
+  "perspective.": "视角。",
+  "Choose at least one service to start your package.": "选择至少一项服务开始组合。",
+  "Show rooms and details": "展示房间与细节",
+  "Help people understand the layout": "帮助买家了解布局",
+  "Show the home and its surroundings": "展示住宅与周边环境",
+  "Create a complete media mix": "创建完整影像组合",
+  "Show the parcel and surrounding context": "展示地块及周边环境",
+  "Add a view in motion": "加入动态视角",
+  "Photography gives each room and its details a clear place in your listing.":
+    "摄影让每个房间和细节在房源展示中清晰呈现。",
+  "Pair still images with linked panoramic viewpoints so visitors can explore how rooms connect.":
+    "组合照片和相连全景视点，让访客探索房间之间的连接。",
+  "Ground-level photos introduce the home; aerial photos add the lot, views, and surrounding context.":
+    "地面照片展示住宅，航拍照片补充地块、视野和周边环境。",
+  "Still images, panoramic exploration, and aerial media each tell a different part of the property story.":
+    "照片、全景探索和航拍影像分别展示房产故事的不同部分。",
+  "Aerial photography helps show lot layout, access context, and nearby views.":
+    "航拍摄影有助于展示地块布局、出入环境及附近景观。",
+  "Pair aerial stills with a short edited aerial video for a wider view of the setting.":
+    "组合航拍照片与短篇精剪视频，更全面展示环境。",
+  "Show what makes a room feel right.": "展示房间的独特魅力。",
+  "Give buyers a clear look at spaces, light, finishes, and how interior and exterior areas relate.":
+    "让买家清晰了解空间、光线、装修细节以及室内外联系。",
+  "Edited interior and exterior images": "精修室内与室外照片",
+  "Room character and important details": "房间特色与重要细节",
+  "Still images for listing and property marketing": "用于房源展示和房产营销的照片",
+  "Let visitors explore the connections.": "让访客探索空间之间的联系。",
+  "An Insta360-captured 360° panoramic walkthrough lets visitors look around rooms and move between linked viewpoints.":
+    "使用 Insta360 拍摄的360°全景漫游，让访客环顾房间并在相连视点之间移动。",
+  "Linked panoramic viewpoints": "相连的全景视点",
+  "Visitors choose where to look next": "访客自行选择下一个视角",
+  "Six months of included hosting": "包含六个月托管",
+  "Put the property in context.": "展示房产的周边环境。",
+  "Show the lot, nearby setting, and views from above. Especially useful for land and properties whose surroundings matter.":
+    "从空中展示地块、周边环境和视野，适合土地及周边环境重要的房产。",
+  "Lot layout and surrounding context": "地块布局与周边环境",
+  "Views and the wider setting": "景观与更广阔的环境",
+  "10 edited aerial photos": "10张精修航拍照片",
+  "Give the setting a sense of motion.": "让环境动起来。",
+  "An edited aerial sequence introduces the property and its surroundings in a concise video for listing marketing.":
+    "以简洁的精剪航拍视频介绍房产及周边环境，用于房源营销。",
+  "Edited 30–45-second horizontal video": "精剪30至45秒横向视频",
+  "Licensed music": "授权音乐",
+  "Aerial footage focused on property and context": "聚焦房产及环境的航拍素材",
+  "Add to My Package +": "加入我的组合 +",
+  "Remove from My Package −": "从我的组合移除 −",
+  "Highlight finishes and details that give a room its character.":
+    "突出赋予房间特色的装修和细节。",
+  "Show the spaces and their relationships through clear interior views.":
+    "通过清晰室内视角展示空间及其联系。",
+  "Show how light shapes a room and its atmosphere.": "展示光线如何塑造房间和氛围。",
+  "Aerial media can show lot layout in the surrounding landscape. These labels are illustrative, not parcel boundaries.":
+    "航拍可展示地块在周边景观中的布局。标示仅供示意，不是地块边界。",
+  "Show the views and nearby context that are hard to communicate at ground level.":
+    "展示地面视角难以表达的景观和周边环境。",
+  "Show surrounding access context from above. This illustration does not verify access rights or boundaries.":
+    "从空中展示周边出入环境。此示意图不核实通行权或边界。",
+  "How linked viewpoints work": "相连视点如何运作",
+  "One room.": "一个房间。",
+  "The next perspective.": "下一个视角。",
+  "Living room": "客厅",
+  Kitchen: "厨房",
+  Patio: "露台",
+  "Illustrative viewpoint diagram. This is not a real tour or interactive panorama. A genuine sample tour will be added when supplied.":
+    "视点示意图，不是真实漫游或交互全景。真实样本将在提供后加入。",
+  "Start at a living-room viewpoint and look around within its panorama.":
+    "从客厅视点开始，在全景中环顾四周。",
+  "Select a linked kitchen viewpoint to explore the next space.":
+    "选择相连的厨房视点，探索下一个空间。",
+  "A linked patio viewpoint can connect the indoor and outdoor story.":
+    "相连的露台视点将室内与室外故事连接起来。",
+  "Illustrative video storyboard": "视频分镜示意",
+  "01 · Establish the setting": "01 · 展示环境",
+  "02 · Introduce the property": "02 · 介绍房产",
+  "03 · Show the wider view": "03 · 展示广阔视野",
+  "Explore the sequence →": "探索分镜顺序 →",
+  "Sample stills · Unsplash. This is a storyboard, not FlyBy video footage. No autoplay video.":
+    "示例照片 · Unsplash。这是分镜示意，不是 FlyBy 视频素材，无自动播放视频。",
+  "Begin with the setting and surrounding context.": "先展示环境和周边。",
+  "Move to the property itself.": "转向房产本身。",
+  "Finish with a wider view of the surroundings.": "以更广阔的周边视野结束。",
+  "Turn page from bottom right corner": "从右下角翻页",
+  "Turn page from bottom left corner": "从左下角翻页",
+  "Sample imagery: modern home and pool": "示例图片：现代住宅和泳池",
+  "Sample imagery: bright living room with seating": "示例图片：明亮客厅和座椅",
+  "Sample imagery: exterior of a contemporary home": "示例图片：现代住宅外观",
+  "Sample imagery: open landscape with distant views": "示例图片：开阔景观和远景",
+  "Sample imagery: modern home with a pool": "示例图片：带泳池的现代住宅",
+  "Photos + Panoramic Tour": "照片 + 全景漫游",
+  "Help visitors connect the spaces.": "帮助访客理解空间联系。",
+  "Pair still photos with a linked panoramic walkthrough to show how rooms relate. This reference image is not a live tour.":
+    "组合照片和相连全景漫游，展示房间之间的联系。此参考图片不是实时漫游。",
+  "Choose Photos + Tour →": "选择照片 + 漫游 →",
+  "Give the setting its own story.": "让环境讲述自己的故事。",
+  "Aerial media helps show land, views, and surrounding context. This landscape image illustrates the direction, not FlyBy aerial work.":
+    "航拍有助于展示土地、景观与周边环境。此景观图片用于说明方向，并非 FlyBy 航拍作品。",
+  "Choose Aerial Media →": "选择航拍影像 →",
+  "A better perspective": "更好的视角",
+  "Enter your property size and compare costs in Pricing.":
+    "在报价页输入房产面积并比较费用。",
+  "25–40 edited images, depending on home size. Compare the tiers in Pricing.":
+    "按住宅面积提供25至40张精修照片，请在报价页比较档位。",
+  "Up to 12–24 viewpoints by home size. No measured 3D model, dollhouse, floor plans, or automatic Zillow integration. Hosting extensions require a quote before the included period ends.":
+    "按住宅面积提供最多12至24个视点，不包含带测量数据的3D模型、娃娃屋、平面图或自动 Zillow 集成。续期托管需在包含期限结束前另行报价。",
+  "One property up to two acres. Flight availability and suitable weather apply. Any boundary overlays are illustrative, based on client-supplied information, and are not surveys.":
+    "适用于两英亩以内的单个房产，需具备飞行条件和适宜天气。边界叠加基于客户信息，仅供示意，不是测量结果。",
+  "One property up to two acres. Flight availability and suitable weather apply.":
+    "适用于两英亩以内单个房产，需具备飞行条件和适宜天气。",
+});
+
+Object.assign(window.FlyByChinese, {
+  "View My Equipment →": "查看我的器材 →",
+  "Rey’s equipment": "Rey 的器材",
+  "Tools behind your property media.": "房产影像背后的工具。",
+  "Close ×": "关闭 ×",
+  "Sony mirrorless camera": "Sony 无反相机",
+  "For interior and exterior property photography.": "用于房产室内与室外摄影。",
+  "360° camera · Insta360 X5": "360° 相机 · Insta360 X5",
+  "For connected panoramic views that help buyers explore the space.":
+    "用于相连的全景视点，帮助买家探索空间。",
+  "Drone · Autel Robotics EVO II PRO RTK V3": "无人机 · Autel Robotics EVO II PRO RTK V3",
+  "For aerial photos and video showing the property and its surroundings.":
+    "用于展示房产及周边环境的航拍照片与视频。",
+  "Lighting & photography accessories": "灯光与摄影配件",
+  "Lighting and miscellaneous photography equipment to support the shot.":
+    "用于辅助拍摄的灯光及其他摄影器材。",
+  "Vacuum & touch-up tools": "吸尘器与局部整理工具",
+  "A vacuum and miscellaneous cleaning tools for small, practical touch-ups before a photo.":
+    "吸尘器及其他清洁工具，用于拍摄前的小范围整理。",
+  "Please prepare the home before we arrive.": "请在我们到达前整理好房屋。",
+  "We do not provide cleaning services. Please have the home cleaned and photo-ready before the shoot. The crew may address a small, easy-to-fix distraction to improve a shot, but these touch-ups do not replace property cleaning or preparation.":
+    "我们不提供清洁服务。请在拍摄前完成清洁，使房屋达到可拍摄状态。团队可能会处理容易修正的小干扰以改善画面，但这类局部整理不能替代房产清洁或拍摄准备。",
+});
+
+Object.assign(window.FlyByChinese, {
+  "Equipment illustrations; Sony body and accessories shown are representative.":
+    "器材插画；所示 Sony 机身及配件为示意。",
+  "Illustration of a Sony mirrorless camera": "Sony 无反相机插画",
+  "Illustration of an Insta360 X5 camera": "Insta360 X5 相机插画",
+  "Illustration of an Autel EVO II drone": "Autel EVO II 无人机插画",
+  "Illustration of lighting and photography accessories": "灯光与摄影配件插画",
+  "Illustration of a vacuum and touch-up tools": "吸尘器与局部整理工具插画",
+});

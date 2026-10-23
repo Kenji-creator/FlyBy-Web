@@ -1,0 +1,289 @@
+.pip-dock {
+  position: fixed;
+  right: 22px;
+  bottom: 18px;
+  z-index: 25;
+  font-family: Inter, Arial, sans-serif;
+}
+.pip-launcher {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0;
+  width: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ink);
+  font-size: 10px;
+  line-height: 1.2;
+  gap: 4px;
+  border: 0;
+}
+.pip-mascot {
+  width: 64px;
+  height: 66px;
+  display: block;
+  filter: drop-shadow(0 4px 6px #17252a22);
+}
+.pip-launcher:hover .pip-mascot {
+  animation: pip-hello 0.65s ease;
+}
+.pip-launcher > span {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+.pip-panel {
+  position: absolute;
+  right: 0;
+  bottom: 90px;
+  width: 345px;
+  max-width: calc(100vw - 32px);
+  max-height: 75dvh;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 24px 80px #17252a24;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.pip-panel[hidden],
+.pip-guide-box[hidden],
+.pip-walker[hidden] {
+  display: none;
+}
+.pip-header {
+  padding: 18px;
+  background: var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.pip-header h2 {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+.pip-header p {
+  font-size: 10px;
+  margin: 5px 0 0;
+  color: var(--slate);
+}
+.pip-close {
+  background: transparent;
+  color: var(--ink);
+  font-size: 22px;
+  padding: 2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+.pip-close:hover {
+  background: var(--ivory);
+  color: var(--teal);
+}
+.pip-content {
+  padding: 18px;
+  overflow: auto;
+}
+.pip-content > p {
+  font-size: 13px;
+  margin: 0 0 14px;
+}
+.pip-quick {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.pip-quick button {
+  font-size: 11px;
+  padding: 9px 10px;
+  background: var(--ivory);
+  color: var(--teal);
+  border: 1px solid var(--line);
+}
+.pip-history {
+  font-size: 13px;
+  max-height: 270px;
+  overflow: auto;
+}
+.pip-message {
+  background: var(--sage);
+  padding: 13px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.pip-message p {
+  font-size: 13px;
+  color: var(--ink);
+  margin: 0 0 9px;
+}
+.pip-message a,
+.pip-message button {
+  font-size: 12px;
+}
+.pip-message button {
+  margin-top: 8px;
+  padding: 9px 12px;
+}
+.pip-user {
+  font-size: 12px;
+  color: var(--slate);
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+.pip-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+.pip-form label {
+  flex: 1;
+}
+.pip-form input {
+  margin: 0;
+  padding: 10px;
+  font-size: 12px;
+}
+.pip-form button {
+  padding: 9px 12px;
+  font-size: 12px;
+  align-self: start;
+}
+.pip-guide-action {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 12px;
+  padding: 10px;
+}
+.pip-walker {
+  position: fixed;
+  width: 56px;
+  height: 58px;
+  left: calc(100vw - 86px);
+  top: calc(100dvh - 100px);
+  z-index: 26;
+  pointer-events: none;
+  transition:
+    left 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    top 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.pip-walker .pip-mascot {
+  width: 56px;
+  height: 58px;
+}
+.pip-walker.walking .pip-feet {
+  animation: pip-feet 0.2s linear 4;
+}
+.pip-guide-box {
+  position: fixed;
+  right: 22px;
+  bottom: 20px;
+  z-index: 27;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  padding: 18px;
+  background: white;
+  border: 1px solid var(--teal);
+  border-radius: 10px;
+  box-shadow: 0 12px 45px #17252a20;
+}
+.pip-guide-box h3 {
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+.pip-guide-box p {
+  font-size: 13px;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+.pip-guide-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pip-guide-controls button {
+  font-size: 11px;
+  padding: 8px 12px;
+}
+.helper-guiding .pip-launcher {
+  visibility: hidden;
+}
+.pip-form label > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+@keyframes pip-hello {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  40% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  70% {
+    transform: translateY(-2px) rotate(4deg);
+  }
+}
+@keyframes pip-feet {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+@media (max-width: 480px) {
+  .pip-dock {
+    right: 14px;
+    bottom: 14px;
+  }
+  .pip-panel {
+    width: 330px;
+    bottom: 87px;
+    max-height: 70dvh;
+  }
+  .pip-guide-box {
+    right: 14px;
+    bottom: 14px;
+  }
+  .pip-launcher {
+    width: 60px;
+  }
+  .pip-mascot {
+    width: 58px;
+    height: 60px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pip-launcher:hover .pip-mascot,
+  .pip-walker.walking .pip-feet {
+    animation: none;
+  }
+  .pip-walker {
+    transition: none;
+  }
+}
+
+.pip-clear-chat {
+  font-size: 11px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+.pip-guide-box {
+  max-height: calc(100dvh - 120px);
+  overflow: auto;
+}
+.pip-guide-box p {
+  overflow-wrap: anywhere;
+}

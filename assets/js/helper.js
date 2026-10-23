@@ -1,0 +1,594 @@
+(() => {
+  const language = () =>
+      document.documentElement.lang === "zh-CN"
+        ? "zh-CN"
+        : document.documentElement.lang === "zh-CN"
+          ? "zh-CN"
+          : document.documentElement.lang === "zh-CN"
+            ? "zh-CN"
+            : document.documentElement.lang === "zh-CN"
+              ? "zh-CN"
+              : document.documentElement.lang === "es"
+                ? "es"
+                : "en",
+    copy = {
+      en: {
+        open: "Ask Blair",
+        title: "Blair · FlyBy guide",
+        subtitle: "Your little guide to FlyBy",
+        hello:
+          "Hi! I can explain services, estimates, and next steps. If I don’t know, I’ll help you ask the FlyBy Crew.",
+        close: "Close helper",
+        input: "Ask a question",
+        placeholder: "Ask about services, pricing, or hosting…",
+        send: "Ask",
+        guide: "Guide me through Contact",
+        unknown:
+          "I don’t have a verified answer to that. Let’s ask the FlyBy Crew on the Contact page. Your question can go in Notes; I won’t submit it for you.",
+        contact: "Ask the FlyBy Crew on Contact →",
+        back: "Back",
+        next: "Next",
+        stop: "Stop guide",
+        done: "Finish guide",
+        guideTitle: "Contact walkthrough",
+        steps: [
+          "Choose “Contact Me with Answers.” You don’t need an estimate or date for a question.",
+          "Enter your name so the FlyBy Crew knows who to reply to.",
+          "Enter your email so the FlyBy Crew can contact you. Phone is optional.",
+          "Add your question in Notes if you want. You can leave Notes empty.",
+          "Check your details, then use “Request a Reply” to send to FlyBy’s business email once it is connected. This guide never submits for you.",
+        ],
+        quick: ["Services", "Estimate", "360° Tours", "Meet the Crew"],
+      },
+      es: {
+        open: "Pregúntale a Blair",
+        title: "Blair · Guía FlyBy",
+        subtitle: "Tu pequeña guía de FlyBy",
+        hello:
+          "¡Hola! Puedo explicar servicios, estimaciones y próximos pasos. Si no sé la respuesta, te ayudo a preguntarle al equipo FlyBy.",
+        close: "Cerrar ayuda",
+        input: "Haz una pregunta",
+        placeholder: "Pregunta por servicios, precios o alojamiento…",
+        send: "Preguntar",
+        guide: "Guíame por Contacto",
+        unknown:
+          "No tengo una respuesta verificada. Preguntémosle al equipo FlyBy en Contacto. Tu pregunta puede ir en Notas; no la enviaré por ti.",
+        contact: "Preguntar al equipo FlyBy en Contacto →",
+        back: "Atrás",
+        next: "Siguiente",
+        stop: "Detener guía",
+        done: "Terminar guía",
+        guideTitle: "Guía de Contacto",
+        steps: [
+          "Elige “Contactarme para responder mis preguntas.” No necesitas estimación ni fecha.",
+          "Ingresa tu nombre para que el equipo FlyBy sepa a quién responder.",
+          "Ingresa tu correo para que el equipo FlyBy pueda contactarte. El teléfono es opcional.",
+          "Añade tu pregunta en Notas si quieres. Puedes dejar Notas vacío.",
+          "Revisa los datos y usa “Solicitar respuesta” para enviar al correo empresarial cuando esté conectado. Esta guía no envía por ti.",
+        ],
+        quick: ["Servicios", "Estimación", "Recorridos 360°", "Conoce al equipo"],
+      },
+    };
+  copy["zh-CN"] = window.FlyByChineseHelper;
+  const svg =
+    '<svg class="pip-mascot blair-bird" viewBox="0 0 100 100" aria-hidden="true"><ellipse class="blair-perch-shadow" cx="50" cy="89" rx="20" ry="3" fill="#09294e" opacity=".1"/><g class="blair-bird-feet"><path d="M40 75 L39 86 M60 75 L61 86 M34 87 Q39 84 44 87 M56 87 Q61 84 66 87" fill="none" stroke="#ff8b43" stroke-width="3.2" stroke-linecap="round"/></g><g class="blair-bird-body"><path d="M42 72 Q50 91 58 72" fill="#09294e"/><path d="M24 51 C20 29 29 15 50 15 C71 15 80 29 76 51 C82 69 70 82 50 82 C30 82 18 69 24 51" fill="#00a7b8"/><path d="M28 42 Q26 26 41 21" fill="none" stroke="#85d9df" stroke-width="3" stroke-linecap="round" opacity=".65"/><ellipse cx="50" cy="62" rx="20" ry="16" fill="#e4f4ef"/><path d="M36 68 Q50 76 64 68" fill="none" stroke="#ffffff99" stroke-width="2" stroke-linecap="round"/><ellipse cx="38" cy="36" rx="6.3" ry="8" fill="#09294e"/><ellipse cx="62" cy="36" rx="6.3" ry="8" fill="#09294e"/><circle cx="36.5" cy="33.5" r="2" fill="#fffef7"/><circle cx="60.5" cy="33.5" r="2" fill="#fffef7"/><circle cx="40" cy="39" r=".8" fill="#8ddde1"/><circle cx="64" cy="39" r=".8" fill="#8ddde1"/><ellipse cx="28" cy="47" rx="5" ry="2.8" fill="#ffb7a2" opacity=".8"/><ellipse cx="72" cy="47" rx="5" ry="2.8" fill="#ffb7a2" opacity=".8"/><path d="M44 46 Q50 42 56 46 Q54 53 50 54 Q46 53 44 46" fill="#ff8b43"/><path d="M47 46 Q50 45 53 46" fill="none" stroke="#ffd5a3" stroke-width="1.7" stroke-linecap="round"/><g class="blair-bird-far-wing"><path d="M25 52 C12 53 9 68 21 76 Q25 68 25 52" fill="#09294e"/><path d="M20 58 Q16 64 20 69" fill="none" stroke="#24829b" stroke-width="2" stroke-linecap="round"/></g><g class="blair-bird-wing"><path d="M75 52 C88 53 91 68 79 76 Q75 68 75 52" fill="#09294e"/><path d="M80 58 Q84 64 80 69" fill="none" stroke="#24829b" stroke-width="2" stroke-linecap="round"/></g></g></svg>';
+  const dock = document.createElement("div");
+  dock.className = "pip-dock";
+  dock.dataset.noTranslate = "true";
+  dock.innerHTML =
+    '<button class="pip-launcher" aria-expanded="false" aria-controls="pip-panel">' +
+    svg +
+    '<span></span></button><div class="pip-panel" id="pip-panel" role="dialog" aria-labelledby="pip-title" tabindex="-1" hidden><div class="pip-header"><div><h2 id="pip-title"></h2><p id="pip-subtitle"></p></div><button class="pip-close" type="button">×</button></div><div class="pip-content"><p id="pip-greeting"></p><div class="pip-quick"></div><div class="pip-history" role="log" aria-live="polite" aria-relevant="additions"></div><form class="pip-form"><label><span></span><input maxlength="250" autocomplete="off"></label><button type="submit"></button></form><button class="quote-guide-action" type="button"></button><button class="pip-clear-chat outline" type="button"></button><button class="pip-guide-action outline" type="button"></button></div></div>';
+  document.body.append(dock);
+  const select = (s) => dock.querySelector(s),
+    launcher = select(".pip-launcher"),
+    panel = select(".pip-panel"),
+    history = select(".pip-history"),
+    form = select(".pip-form"),
+    input = form.querySelector("input");
+  let messages = [],
+    step = 0,
+    target = null,
+    guiding = false,
+    infoKey = null,
+    lastTopic = null,
+    navigationTimer = 0;
+  try {
+    const saved = JSON.parse(
+      sessionStorage.getItem("flyby-blair-conversation") || "null",
+    );
+    if (saved && Array.isArray(saved.messages)) {
+      messages = saved.messages
+        .filter(
+          (m) =>
+            typeof m.question === "string" &&
+            m.question.length <= 250 &&
+            (m.key === null || window.FlyByHelperAnswers.answer(m.key)),
+        )
+        .slice(-6);
+      lastTopic = window.FlyByHelperAnswers.answer(saved.lastTopic)
+        ? saved.lastTopic
+        : null;
+    }
+  } catch {}
+  const walker = document.createElement("div");
+  walker.className = "pip-walker";
+  walker.hidden = true;
+  walker.innerHTML = svg;
+  const guide = document.createElement("div");
+  guide.className = "pip-guide-box";
+  guide.dataset.noTranslate = "true";
+  guide.hidden = true;
+  guide.innerHTML =
+    '<h3></h3><p role="status" aria-live="polite"></p><div class="pip-guide-controls"><button data-guide="back" class="outline"></button><button data-guide="next"></button><button data-guide="stop" class="outline"></button></div>';
+  document.body.append(walker, guide);
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+  function close() {
+    panel.hidden = true;
+    launcher.setAttribute("aria-expanded", "false");
+    launcher.focus();
+  }
+  function ownerAtPlay() {
+    return document.body.classList.contains("crew-companion-page") && infoKey === "owner";
+  }
+  function open() {
+    const reveal = () => {
+      panel.hidden = false;
+      launcher.setAttribute("aria-expanded", "true");
+      panel.focus();
+    };
+    if (guiding && !ownerAtPlay()) {
+      stopGuide(true, reveal);
+      return;
+    }
+    reveal();
+  }
+  launcher.onclick = () => (panel.hidden ? open() : close());
+  select(".pip-close").onclick = close;
+  function contact(question = "") {
+    if (document.querySelector("#request")) {
+      if (question) {
+        const notes = document.querySelector('[name="notes"]');
+        if (notes) {
+          if (!notes.value.split("\n").includes(question))
+            notes.value = notes.value ? notes.value + "\n" + question : question;
+          notes.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+      }
+      startGuide();
+      return;
+    }
+    try {
+      if (question) sessionStorage.setItem("flyby-helper-question", question);
+      sessionStorage.setItem("flyby-helper-guide", "1");
+    } catch {}
+    showInformation("contact");
+  }
+  function renderMessages() {
+    history.replaceChildren();
+    for (const message of messages) {
+      if (message.question) {
+        const user = document.createElement("p");
+        user.className = "pip-user";
+        user.textContent = message.question;
+        history.append(user);
+      }
+      const bubble = document.createElement("div");
+      bubble.className = "pip-message";
+      const paragraph = document.createElement("p"),
+        answer = message.key
+          ? window.FlyByHelperAnswers.answer(message.key, language())
+          : null;
+      paragraph.textContent = answer ? answer.text : copy[language()].unknown;
+      bubble.append(paragraph);
+      if (answer && answer.route) {
+        const link = document.createElement("a");
+        link.href = answer.href;
+        link.textContent = answer.label;
+        link.onclick = (event) => {
+          event.preventDefault();
+          if (["pricing", "quoteGuide", "booking"].includes(message.key))
+            window.FlyByQuoteGuide?.start();
+          else if (message.key === "customGuide") window.FlyByQuoteGuide?.start(true);
+          else showInformation(message.key);
+        };
+        bubble.append(link);
+      } else if (!answer) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = copy[language()].contact;
+        button.onclick = () => contact(message.question);
+        bubble.append(button);
+      }
+      history.append(bubble);
+    }
+    history.scrollTop = history.scrollHeight;
+  }
+  function saveConversation() {
+    try {
+      sessionStorage.setItem(
+        "flyby-blair-conversation",
+        JSON.stringify({ messages, lastTopic }),
+      );
+    } catch {}
+  }
+  function ask(key, question = "") {
+    const companionReply =
+      ownerAtPlay() &&
+      Boolean(key) &&
+      !window.FlyByHelperAnswers.answer(key, language())?.route;
+    if (guiding && !companionReply) stopGuide(false);
+    messages.push({ key, question });
+    if (messages.length > 6) messages.shift();
+    const answer = key ? window.FlyByHelperAnswers.answer(key, language()) : null;
+    if (answer?.route) lastTopic = key;
+    saveConversation();
+    renderMessages();
+    if (
+      ["hello", "thanks", "wellbeing"].includes(key) &&
+      !reduced.matches &&
+      !document.body.classList.contains("blair-paused")
+    ) {
+      launcher.classList.add("waving");
+      setTimeout(() => launcher.classList.remove("waving"), 1700);
+    }
+    if (key === "quoteGuide" || key === "booking") {
+      window.FlyByQuoteGuide?.start();
+      return;
+    }
+    if (key === "customGuide") {
+      window.FlyByQuoteGuide?.start(true);
+      return;
+    }
+    if (key === "contact") contact();
+    else if (answer?.route) showInformation(key);
+    else if (!answer) contact(question);
+  }
+  form.onsubmit = (event) => {
+    event.preventDefault();
+    const question = input.value.trim();
+    if (!question) return;
+    ask(window.FlyByHelperAnswers.match(question, lastTopic), question);
+    input.value = "";
+  };
+  function render() {
+    const text = copy[language()];
+    select(".quote-guide-action").textContent =
+      language() === "zh-CN"
+        ? "从估价到提交，逐步引导我"
+        : language() === "zh-CN"
+          ? "从估价到提交，逐步引导我"
+          : language() === "zh-CN"
+            ? "从估价到提交，逐步引导我"
+            : language() === "zh-CN"
+              ? "从估价到提交，逐步引导我"
+              : language() === "es"
+                ? "Guíame de la estimación al envío"
+                : "Guide me from estimate to submission";
+    select(".quote-guide-action").onclick = () => window.FlyByQuoteGuide?.start();
+    select(".pip-clear-chat").textContent =
+      language() === "zh-CN"
+        ? "清除对话"
+        : language() === "zh-CN"
+          ? "清除对话"
+          : language() === "zh-CN"
+            ? "清除对话"
+            : language() === "zh-CN"
+              ? "清除对话"
+              : language() === "es"
+                ? "Borrar conversación"
+                : "Clear conversation";
+    select(".pip-clear-chat").onclick = () => {
+      messages = [];
+      lastTopic = null;
+      try {
+        sessionStorage.removeItem("flyby-blair-conversation");
+      } catch {}
+      renderMessages();
+      input.focus();
+    };
+    launcher.querySelector("span").textContent = text.open;
+    launcher.setAttribute("aria-label", text.open);
+    select("#pip-title").textContent = text.title;
+    select("#pip-subtitle").textContent = text.subtitle;
+    select("#pip-greeting").textContent = text.hello;
+    select(".pip-close").setAttribute("aria-label", text.close);
+    form.querySelector("label>span").textContent = text.input;
+    input.placeholder = text.placeholder;
+    form.querySelector("button").textContent = text.send;
+    select(".pip-guide-action").textContent = text.guide;
+    select(".pip-guide-action").onclick = () => contact();
+    const quick = select(".pip-quick");
+    quick.replaceChildren();
+    quick.hidden = true;
+    renderMessages();
+    if (guiding) renderGuide();
+  }
+  function stopGuide(returnHome = true, after = null) {
+    window.FlyByBlairPresentation?.cancelNavigation();
+    window.FlyByBlairPresentation?.release();
+    const wasFlying = guiding && !walker.hidden;
+    if (navigationTimer) {
+      clearTimeout(navigationTimer);
+      navigationTimer = 0;
+      try {
+        sessionStorage.removeItem("flyby-helper-guide");
+        sessionStorage.removeItem("flyby-helper-question");
+        sessionStorage.removeItem("flyby-blair-arrival");
+      } catch {}
+    }
+    infoKey = null;
+    window.FlyByBlair?.stop();
+    guiding = false;
+    document.body.classList.remove("helper-guiding");
+    if (target) target.classList.remove("helper-highlight");
+    target = null;
+    guide.hidden = true;
+    const done = () => {
+      walker.hidden = true;
+      document.body.classList.remove("helper-returning");
+      launcher.focus();
+      if (typeof after === "function") after();
+    };
+    if (returnHome !== false && wasFlying && window.FlyByBlair?.home) {
+      document.body.classList.add("helper-returning");
+      window.FlyByBlair.home(walker, launcher, done);
+    } else done();
+  }
+  function renderGuide() {
+    const text = copy[language()];
+    if (infoKey) {
+      const answer = window.FlyByHelperAnswers.answer(infoKey, language());
+      guide.querySelector("h3").textContent = answer?.label || text.guideTitle;
+      guide.querySelector("p").textContent = answer?.text || text.unknown;
+      guide.querySelector('[data-guide="back"]').hidden = true;
+      guide.querySelector('[data-guide="next"]').textContent =
+        language() === "zh-CN"
+          ? "再问一个问题"
+          : language() === "zh-CN"
+            ? "再问一个问题"
+            : language() === "zh-CN"
+              ? "再问一个问题"
+              : language() === "zh-CN"
+                ? "再问一个问题"
+                : language() === "es"
+                  ? "Preguntar algo más"
+                  : "Ask something else";
+      guide.querySelector('[data-guide="stop"]').textContent = text.stop;
+      return;
+    }
+    guide.querySelector('[data-guide="back"]').hidden = false;
+    guide.querySelector("h3").textContent = text.guideTitle + " · " + (step + 1) + "/5";
+    guide.querySelector("p").textContent = text.steps[step];
+    guide.querySelector('[data-guide="back"]').textContent = text.back;
+    guide.querySelector('[data-guide="back"]').disabled = step === 0;
+    guide.querySelector('[data-guide="next"]').textContent =
+      step === 4 ? text.done : text.next;
+    guide.querySelector('[data-guide="stop"]').textContent = text.stop;
+  }
+  function moveToTarget() {
+    if (!guiding || !target) return;
+    if (window.FlyByBlairPresentation) {
+      window.FlyByBlairPresentation.travel(walker, guide, target);
+      return;
+    }
+    const rect = target.getBoundingClientRect(),
+      x = Math.max(8, Math.min(innerWidth - 70, rect.left - 65)),
+      y = Math.max(90, Math.min(innerHeight - 80, rect.top));
+    if (window.FlyByBlair) window.FlyByBlair.move(walker, x, y);
+    else {
+      walker.style.left = x + "px";
+      walker.style.top = y + "px";
+      walker.classList.add("pointing");
+    }
+  }
+  function showStep() {
+    if (target) target.classList.remove("helper-highlight");
+    const selectors = [
+      '[name="contact-intent"][value="questions"]',
+      '[name="name"]',
+      '[name="email"]',
+      '[name="notes"]',
+      "#contact-continue",
+    ];
+    target = document.querySelector(selectors[step]);
+    if (!target) {
+      stopGuide();
+      return;
+    }
+    target.classList.add("helper-highlight");
+    target.scrollIntoView({
+      behavior: reduced.matches ? "auto" : "smooth",
+      block: "center",
+    });
+    target.focus({ preventScroll: true });
+    renderGuide();
+    requestAnimationFrame(moveToTarget);
+  }
+  function startGuide() {
+    clearTimeout(navigationTimer);
+    infoKey = null;
+    if (!document.querySelector("#request")) {
+      contact();
+      return;
+    }
+    const radio = document.querySelector('[name="contact-intent"][value="questions"]');
+    if (radio) {
+      radio.checked = true;
+      radio.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+    panel.hidden = true;
+    launcher.setAttribute("aria-expanded", "false");
+    guiding = true;
+    step = 0;
+    document.body.classList.add("helper-guiding");
+    guide.hidden = Boolean(window.FlyByBlairPresentation);
+    window.FlyByBlair?.adopt?.(walker);
+    walker.hidden = false;
+    showStep();
+  }
+  guide.querySelector('[data-guide="next"]').onclick = () => {
+    if (infoKey) {
+      open();
+      input.focus();
+      return;
+    }
+    if (step === 4) stopGuide();
+    else {
+      step++;
+      showStep();
+    }
+  };
+  guide.querySelector('[data-guide="back"]').onclick = () => {
+    if (infoKey) return;
+    step = Math.max(0, step - 1);
+    showStep();
+  };
+  guide.querySelector('[data-guide="stop"]').onclick = stopGuide;
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      if (document.querySelector("dialog[open]")) return;
+      if (ownerAtPlay() && !panel.hidden) close();
+      else if (guiding) stopGuide();
+      else if (!panel.hidden) close();
+    }
+  });
+  let moving = false;
+  addEventListener(
+    "scroll",
+    () => {
+      if (guiding && !moving) {
+        moving = true;
+        requestAnimationFrame(() => {
+          moving = false;
+          moveToTarget();
+        });
+      }
+    },
+    { passive: true },
+  );
+  addEventListener("resize", () => {
+    if (guiding) moveToTarget();
+  });
+  document.addEventListener("flyby-language-change", render);
+  render();
+  if (document.querySelector("#request"))
+    try {
+      const question = sessionStorage.getItem("flyby-helper-question");
+      if (question) {
+        const notes = document.querySelector('[name="notes"]');
+        if (notes) {
+          if (!notes.value.split("\n").includes(question))
+            notes.value = notes.value ? notes.value + "\n" + question : question;
+          notes.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+        sessionStorage.removeItem("flyby-helper-question");
+      }
+      if (sessionStorage.getItem("flyby-helper-guide")) {
+        sessionStorage.removeItem("flyby-helper-guide");
+        startGuide();
+      }
+    } catch {}
+
+  function showInformation(key, arrival = false) {
+    const answer = window.FlyByHelperAnswers.answer(key, language());
+    if (!answer?.route) return;
+    lastTopic = key;
+    saveConversation();
+    stopGuide(false);
+    infoKey = key;
+    panel.hidden = true;
+    launcher.setAttribute("aria-expanded", "false");
+    guiding = true;
+    document.body.classList.add("helper-guiding");
+    window.FlyByBlair?.adopt?.(walker);
+    walker.hidden = false;
+    guide.hidden = Boolean(window.FlyByBlairPresentation);
+    renderGuide();
+    const route = answer.route,
+      current = (location.pathname || "").split("/").pop() || "index.html";
+    if (key === "contact" && current === route.page) {
+      startGuide();
+      return;
+    }
+    if (current !== route.page) {
+      if (window.FlyByBlairPresentation) {
+        guide.hidden = true;
+        window.FlyByBlairPresentation.navigate(
+          walker,
+          route.page + "?blair=" + encodeURIComponent(key),
+          key,
+        );
+        return;
+      }
+      target =
+        [...document.querySelectorAll("header a")].find(
+          (a) => (a.getAttribute("href") || "").split("#")[0] === route.page,
+        ) || document.querySelector("main h1");
+      if (target) moveToTarget();
+      navigationTimer = setTimeout(() => {
+        navigationTimer = 0;
+        try {
+          sessionStorage.setItem("flyby-blair-arrival", key);
+        } catch {}
+        location.href = route.page + "?blair=" + encodeURIComponent(key);
+      }, 3500);
+      return;
+    }
+    if (route.activate) document.querySelector(route.activate)?.click();
+    target = document.querySelector(route.selector) || document.querySelector("main h1");
+    if (key === "delivery")
+      target =
+        [...document.querySelectorAll("main details")].find((d) =>
+          /media arrive|entrega|contenido.*lleg/i.test(d.textContent),
+        ) || target;
+    if (!target) {
+      stopGuide();
+      return;
+    }
+    if (target.tagName === "DETAILS") target.open = true;
+    target.classList.add("helper-highlight");
+    if (!document.body.classList.contains("portfolio-screen"))
+      target.scrollIntoView({
+        behavior: reduced.matches ? "auto" : "smooth",
+        block: "center",
+      });
+    if (!target.matches("input,button,select,textarea,a"))
+      target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+    requestAnimationFrame(moveToTarget);
+  }
+  try {
+    let arrival = sessionStorage.getItem("flyby-blair-arrival");
+    sessionStorage.removeItem("flyby-blair-arrival");
+    if (!arrival && location.search)
+      arrival = new URLSearchParams(location.search).get("blair");
+    if (window.FlyByBlairTopics?.includes(arrival))
+      requestAnimationFrame(() => showInformation(arrival, true));
+  } catch {}
+  document.addEventListener("flyby-request-sent", () => {
+    if (guiding) stopGuide();
+  });
+  window.FlyByHelperUI = {
+    companion() {
+      if (guiding || window.FlyByQuoteGuide?.active()) return;
+      const photo = document.querySelector("#owner-photo");
+      if (!photo) return;
+      walker.hidden = false;
+      guide.hidden = true;
+      window.FlyByBlairPresentation?.travel(walker, guide, photo, true);
+    },
+    show: showInformation,
+    topic: () => infoKey,
+    stop() {
+      stopGuide();
+    },
+    suspend() {
+      stopGuide(false);
+      panel.hidden = true;
+      launcher.setAttribute("aria-expanded", "false");
+    },
+    contact,
+    open,
+  };
+})();

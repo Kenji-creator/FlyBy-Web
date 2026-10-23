@@ -1,0 +1,291 @@
+body {
+  background-image: radial-gradient(ellipse at 85% 0%, #d8c4a624, transparent 38%);
+}
+header {
+  transition:
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+header.scrolled {
+  box-shadow: 0 8px 28px #17252a0a;
+  background: #f7f4eef7;
+}
+nav {
+  gap: 24px;
+}
+#links {
+  gap: 22px;
+}
+.logo {
+  letter-spacing: -0.055em;
+}
+.language-switch {
+  display: flex;
+  gap: 2px;
+  background: #e4eeeaaa;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 3px;
+  flex: none;
+}
+.language-switch button {
+  padding: 7px 10px;
+  border-radius: 24px;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 600;
+  background: transparent;
+  color: var(--slate);
+}
+.language-switch [aria-pressed="true"] {
+  color: white;
+  background: var(--teal);
+}
+.btn,
+button {
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    translate 0.2s ease;
+}
+.btn:hover {
+  translate: 0 -2px;
+  box-shadow: 0 7px 18px #126b681c;
+}
+.btn:active {
+  translate: 0 0;
+}
+.intro h1 {
+  letter-spacing: -0.06em;
+  line-height: 1.06;
+}
+.intro > p {
+  line-height: 1.7;
+}
+.eyebrow {
+  letter-spacing: 0.2em;
+}
+.hero {
+  position: relative;
+}
+.hero:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 52px;
+  background: #d8c4a6;
+  margin: 0 auto 24px;
+}
+.brand-ready .hero h1 {
+  animation: polished-entry 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.brand-ready .hero > p {
+  animation: polished-entry 1s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.brand-ready .hero .eyebrow {
+  animation: polished-entry 0.7s ease both;
+}
+.cinema figure {
+  box-shadow: 0 20px 65px #17252a16;
+}
+.cinema figure:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 -65px 80px -80px #17252a80;
+  pointer-events: none;
+}
+.grid article {
+  transition: border-color 0.3s ease;
+}
+.grid article:hover {
+  border-color: var(--teal);
+}
+.choice,
+.match-form {
+  position: relative;
+  isolation: isolate;
+}
+.choice:before,
+.match-form:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    260px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    #126b680b,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.choice:hover:before,
+.match-form:hover:before {
+  opacity: 1;
+}
+.service-panel {
+  border-radius: 6px;
+}
+.service-tabs button {
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.service-tabs button:hover {
+  background: #e4eeea88;
+}
+.demo-hotspot {
+  transition:
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+.demo-hotspot:hover {
+  box-shadow: 0 0 0 10px #f7f4ee60;
+}
+.book-thumbnails button {
+  transition:
+    border-color 0.2s ease,
+    translate 0.2s ease;
+}
+.book-thumbnails button:hover {
+  translate: 0 -3px;
+}
+footer {
+  background: linear-gradient(180deg, transparent, #e4eeea30);
+}
+.story-copy,
+.service-description {
+  text-wrap: pretty;
+}
+.portfolio-screen {
+  background-image: none;
+}
+.portfolio-screen .gallery-intro h1 {
+  letter-spacing: -0.035em;
+}
+.portfolio-screen .book-page h2 {
+  overflow-wrap: anywhere;
+}
+.portfolio-screen .book-controls > button {
+  white-space: nowrap;
+}
+html[lang="es"] nav > .btn {
+  font-size: 13px;
+}
+html[lang="es"] .book-position strong {
+  max-width: 180px;
+}
+html[lang="es"] .service-tabs button span {
+  font-size: 14px;
+}
+html[lang="es"] .service-description h2 {
+  font-size: clamp(30px, 3vw, 44px);
+}
+@keyframes polished-entry {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 1000px) {
+  nav {
+    gap: 12px;
+  }
+  #links {
+    gap: 15px;
+  }
+  .language-switch button {
+    padding: 6px 8px;
+  }
+  nav > .btn {
+    padding: 11px 14px;
+  }
+}
+@media (max-width: 800px) {
+  nav {
+    gap: 8px;
+  }
+  .language-switch {
+    order: 2;
+  }
+  nav > .btn {
+    order: 3;
+  }
+  #menu {
+    order: 1;
+  }
+  .language-switch button {
+    padding: 6px 8px;
+  }
+  .logo {
+    font-size: 27px;
+  }
+  html[lang="es"] nav > .btn {
+    font-size: 11px;
+    padding: 9px 10px;
+  }
+  .hero:before {
+    margin-bottom: 17px;
+  }
+}
+@media (max-width: 420px) {
+  nav {
+    padding-left: 4%;
+    padding-right: 4%;
+    gap: 6px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  #menu {
+    font-size: 11px;
+    padding: 8px;
+  }
+  .language-switch button {
+    font-size: 10px;
+    padding: 6px;
+  }
+  .language-switch {
+    padding: 2px;
+  }
+  nav > .btn {
+    font-size: 11px;
+    padding: 9px 8px;
+  }
+  html[lang="es"] nav > .btn {
+    font-size: 10px;
+    max-width: 110px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .book-jump select {
+    max-width: 100%;
+  }
+  .portfolio-screen .book-page h2 {
+    font-size: clamp(20px, 3.3vh, 30px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  button,
+  header,
+  .grid article,
+  .demo-hotspot {
+    transition: none;
+  }
+  .brand-ready .hero h1,
+  .brand-ready .hero > p,
+  .brand-ready .hero .eyebrow {
+    animation: none;
+  }
+  .btn:hover,
+  .book-thumbnails button:hover {
+    translate: none;
+  }
+}

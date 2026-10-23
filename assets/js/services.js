@@ -1,0 +1,297 @@
+(() => {
+  const find = (s) => document.querySelector(s),
+    all = (s) => [...document.querySelectorAll(s)],
+    money = (n) =>
+      new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n),
+    room =
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
+    home =
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85",
+    land =
+      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85";
+  const names = [
+      "Property Photography",
+      "Interactive 360° Tour",
+      "Aerial Photography",
+      "Aerial Video",
+    ],
+    goals = {
+      Home: [
+        {
+          label: "Show rooms and details",
+          ids: [0],
+          why: "Photography gives each room and its details a clear place in your listing.",
+        },
+        {
+          label: "Help people understand the layout",
+          ids: [0, 1],
+          why: "Pair still images with linked panoramic viewpoints so visitors can explore how rooms connect.",
+        },
+        {
+          label: "Show the home and its surroundings",
+          ids: [0, 2],
+          why: "Ground-level photos introduce the home; aerial photos add the lot, views, and surrounding context.",
+        },
+        {
+          label: "Create a complete media mix",
+          ids: [0, 1, 2, 3],
+          why: "Still images, panoramic exploration, and aerial media each tell a different part of the property story.",
+        },
+      ],
+      Land: [
+        {
+          label: "Show the parcel and surrounding context",
+          ids: [2],
+          why: "Aerial photography helps show lot layout, access context, and nearby views.",
+        },
+        {
+          label: "Add a view in motion",
+          ids: [2, 3],
+          why: "Pair aerial stills with a short edited aerial video for a wider view of the setting.",
+        },
+      ],
+    };
+  let kind = "Home",
+    active = 0,
+    selected = new Set([0]),
+    priority = 0;
+  const size = find("#consult-size"),
+    goal = find("#service-goal"),
+    panel = find("#service-panel"),
+    tabs = all("[data-explore]");
+  const detail = [
+    {
+      title: "Show what makes a room feel right.",
+      copy: "Give buyers a clear look at spaces, light, finishes, and how interior and exterior areas relate.",
+      items: [
+        "Edited interior and exterior images",
+        "Room character and important details",
+        "Still images for listing and property marketing",
+      ],
+      deliverable:
+        "25–40 edited images, depending on home size. Compare the tiers in Pricing.",
+    },
+    {
+      title: "Let visitors explore the connections.",
+      copy: "An Insta360-captured 360° panoramic walkthrough lets visitors look around rooms and move between linked viewpoints.",
+      items: [
+        "Linked panoramic viewpoints",
+        "Visitors choose where to look next",
+        "Six months of included hosting",
+      ],
+      deliverable:
+        "Up to 12–24 viewpoints by home size. No measured 3D model, dollhouse, floor plans, or automatic Zillow integration. Hosting extensions require a quote before the included period ends.",
+    },
+    {
+      title: "Put the property in context.",
+      copy: "Show the lot, nearby setting, and views from above. Especially useful for land and properties whose surroundings matter.",
+      items: [
+        "Lot layout and surrounding context",
+        "Views and the wider setting",
+        "10 edited aerial photos",
+      ],
+      deliverable:
+        "One property up to two acres. Flight availability and suitable weather apply. Any boundary overlays are illustrative, based on client-supplied information, and are not surveys.",
+    },
+    {
+      title: "Give the setting a sense of motion.",
+      copy: "An edited aerial sequence introduces the property and its surroundings in a concise video for listing marketing.",
+      items: [
+        "Edited 30–45-second horizontal video",
+        "Licensed music",
+        "Aerial footage focused on property and context",
+      ],
+      deliverable:
+        "One property up to two acres. Flight availability and suitable weather apply.",
+    },
+  ];
+  function updatePackage() {
+    const list = [...selected].sort();
+    all("[data-match-service]").forEach(
+      (el) => (el.checked = selected.has(+el.dataset.matchService)),
+    );
+    const box = find("#match-estimate");
+    box.replaceChildren();
+    const text = document.createElement("p");
+    text.textContent = list.length
+      ? list.map((i) => names[i]).join(" + ")
+      : "Choose at least one service to start your package.";
+    box.append(text);
+    const note = document.createElement("p");
+    note.textContent = "Enter your property size and compare costs in Pricing.";
+    box.append(note);
+    const params = new URLSearchParams({ services: list.join(","), type: kind });
+    if (size.value) params.set("size", size.value);
+    find("#match-pricing").href = "pricing.html?" + params;
+    const button = find("#service-add");
+    if (button) {
+      button.textContent = selected.has(active)
+        ? "Remove from My Package −"
+        : "Add to My Package +";
+      button.setAttribute("aria-pressed", String(selected.has(active)));
+    }
+  }
+  function showService(index, focus = false) {
+    active = index;
+    tabs.forEach((t) => {
+      const on = +t.dataset.explore === active;
+      t.setAttribute("aria-selected", String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    panel.setAttribute("aria-labelledby", tabs[index].id);
+    const d = detail[index];
+    let media = "";
+    if (index === 0 || index === 2) {
+      const aerial = index === 2;
+      media = `<div><div class="service-demo"><img src="${aerial ? land : room}" alt="Sample imagery: ${aerial ? "open landscape with broad views" : "light-filled living room"}"><span class="demo-credit">Sample imagery · Unsplash${aerial ? " · Context illustration" : ""}</span>${[0, 1, 2].map((i) => `<button class="demo-hotspot" data-point="${i}" style="left:${[20, 55, 75][i]}%;top:${[35, 55, 22][i]}%" aria-label="Explore ${aerial ? ["lot context", "surrounding views", "access context"][i] : ["room details", "space connections", "natural light"][i]}" aria-pressed="${i === 0}">${i + 1}</button>`).join("")}</div><p id="demo-note" class="demo-note" role="status"></p></div>`;
+    } else if (index === 1)
+      media =
+        '<div class="service-demo tour-diagram"><span class="eyebrow">How linked viewpoints work</span><h3>One room.<br>The next perspective.</h3><div class="viewpoints"><button data-view="0" aria-pressed="true">Living room</button><span aria-hidden="true">↔</span><button data-view="1" aria-pressed="false">Kitchen</button><span aria-hidden="true">↔</span><button data-view="2" aria-pressed="false">Patio</button></div><p id="demo-note" class="demo-note" role="status"></p><p class="fine">Illustrative viewpoint diagram. This is not a real tour or interactive panorama. A genuine sample tour will be added when supplied.</p></div>';
+    else
+      media = `<div class="service-demo storyboard"><span class="eyebrow">Illustrative video storyboard</span><div class="storyboard-grid">${[land, home, land].map((src, i) => `<figure><img src="${src}" alt="Sample imagery: ${["landscape setting", "property exterior", "wide landscape"][i]}"><figcaption>${["01 · Establish the setting", "02 · Introduce the property", "03 · Show the wider view"][i]}</figcaption></figure>`).join("")}</div><button class="outline" id="storyboard-next">Explore the sequence →</button><p id="demo-note" role="status"></p><p>Sample stills · Unsplash. This is a storyboard, not FlyBy video footage. No autoplay video.</p></div>`;
+    panel.innerHTML =
+      media +
+      `<div class="service-description"><span class="eyebrow">${names[index]}</span><h2>${d.title}</h2><p>${d.copy}</p><ul>${d.items.map((item) => "<li>" + item + "</li>").join("")}</ul><p class="deliverable">${d.deliverable}</p><button id="service-add" aria-pressed="false">Add to My Package +</button></div>`;
+    panel.classList.remove("panel-enter");
+    void panel.offsetWidth;
+    panel.classList.add("panel-enter");
+    find("#service-add").onclick = () => {
+      selected.has(active) ? selected.delete(active) : selected.add(active);
+      updatePackage();
+    };
+    if (index === 0 || index === 2) {
+      const notes =
+        index === 0
+          ? [
+              "Highlight finishes and details that give a room its character.",
+              "Show the spaces and their relationships through clear interior views.",
+              "Show how light shapes a room and its atmosphere.",
+            ]
+          : [
+              "Aerial media can show lot layout in the surrounding landscape. These labels are illustrative, not parcel boundaries.",
+              "Show the views and nearby context that are hard to communicate at ground level.",
+              "Show surrounding access context from above. This illustration does not verify access rights or boundaries.",
+            ];
+      find("#demo-note").textContent = notes[0];
+      all("[data-point]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            all("[data-point]").forEach((x) =>
+              x.setAttribute("aria-pressed", String(x === b)),
+            );
+            find("#demo-note").textContent = notes[+b.dataset.point];
+          }),
+      );
+    }
+    if (index === 1) {
+      const notes = [
+        "Start at a living-room viewpoint and look around within its panorama.",
+        "Select a linked kitchen viewpoint to explore the next space.",
+        "A linked patio viewpoint can connect the indoor and outdoor story.",
+      ];
+      find("#demo-note").textContent = notes[0];
+      all("[data-view]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            all("[data-view]").forEach((x) =>
+              x.setAttribute("aria-pressed", String(x === b)),
+            );
+            find("#demo-note").textContent = notes[+b.dataset.view];
+          }),
+      );
+    }
+    if (index === 3) {
+      let frame = 0;
+      const frames = all(".storyboard-grid figure"),
+        notes = [
+          "Begin with the setting and surrounding context.",
+          "Move to the property itself.",
+          "Finish with a wider view of the surroundings.",
+        ];
+      function mark() {
+        frames.forEach((f, i) => f.classList.toggle("frame-active", i === frame));
+        find("#demo-note").textContent = notes[frame];
+      }
+      find("#storyboard-next").onclick = () => {
+        frame = (frame + 1) % 3;
+        mark();
+      };
+      mark();
+    }
+    updatePackage();
+    if (focus) tabs[index].focus();
+  }
+  function setGoal() {
+    priority = +goal.value;
+    selected = new Set(goals[kind][priority].ids);
+    find("#recommendation-reason").textContent = goals[kind][priority].why;
+    updatePackage();
+  }
+  function setKind(next) {
+    kind = next;
+    priority = 0;
+    size.value = "";
+    size.min = kind === "Land" ? "0.01" : "1";
+    size.step = kind === "Land" ? "any" : "1";
+    size.placeholder = kind === "Land" ? "e.g. 1.5" : "e.g. 2750";
+    find("#consult-size-label").textContent =
+      kind === "Land" ? "Parcel acreage (optional)" : "Home square footage (optional)";
+    goal.innerHTML = goals[kind]
+      .map((g, i) => '<option value="' + i + '">' + g.label + "</option>")
+      .join("");
+    find("#service-selection").innerHTML =
+      "<legend>Your services — mix and match</legend>" +
+      names
+        .map((n, i) =>
+          kind === "Land" && i < 2
+            ? ""
+            : '<label><input type="checkbox" data-match-service="' +
+              i +
+              '">' +
+              n +
+              "</label>",
+        )
+        .join("");
+    all("[data-match-service]").forEach(
+      (el) =>
+        (el.onchange = () => {
+          const i = +el.dataset.matchService;
+          el.checked ? selected.add(i) : selected.delete(i);
+          updatePackage();
+        }),
+    );
+    tabs.forEach((t) => {
+      const hidden = kind === "Land" && +t.dataset.explore < 2;
+      t.hidden = hidden;
+      t.disabled = hidden;
+    });
+    if (kind === "Land" && active < 2) active = 2;
+    setGoal();
+    showService(active);
+  }
+  tabs.forEach((tab, index) => {
+    tab.onclick = () => showService(index);
+    tab.onkeydown = (e) => {
+      const valid = tabs.filter((t) => !t.disabled),
+        at = valid.indexOf(tab),
+        target =
+          e.key === "ArrowRight"
+            ? valid[(at + 1) % valid.length]
+            : e.key === "ArrowLeft"
+              ? valid[(at + valid.length - 1) % valid.length]
+              : e.key === "Home"
+                ? valid[0]
+                : e.key === "End"
+                  ? valid[valid.length - 1]
+                  : null;
+      if (target) {
+        e.preventDefault();
+        showService(+target.dataset.explore, true);
+      }
+    };
+  });
+  all('[name="service-property"]').forEach((r) => (r.onchange = () => setKind(r.value)));
+  goal.onchange = setGoal;
+  size.addEventListener("input", updatePackage);
+  setKind("Home");
+})();

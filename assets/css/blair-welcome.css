@@ -1,0 +1,80 @@
+.blair-welcome {
+  position: absolute;
+  right: 0;
+  bottom: 112px;
+  width: 282px;
+  max-width: calc(100vw - 32px);
+  padding: 22px 19px 18px;
+  background: #fffef9;
+  border: 1px solid #09294e14;
+  border-radius: 20px 20px 7px 20px;
+  box-shadow: 0 14px 45px #09294e1c;
+  animation: blair-welcome-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.blair-welcome[hidden] {
+  display: none;
+}
+.blair-welcome:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 26px;
+  width: 14px;
+  height: 14px;
+  background: #fffef9;
+  border-right: 1px solid #09294e14;
+  border-bottom: 1px solid #09294e14;
+  transform: rotate(45deg);
+}
+.blair-welcome p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 15px;
+  max-width: 235px;
+}
+.blair-welcome > div {
+  display: flex;
+  gap: 8px;
+}
+.blair-welcome > div button {
+  font-size: 11px;
+  padding: 9px 12px;
+  border-radius: 10px;
+}
+.blair-welcome-close {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  background: transparent;
+  color: var(--slate);
+  padding: 3px;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  border-radius: 50%;
+}
+.blair-welcome-close:hover {
+  background: var(--sage);
+  color: var(--ink);
+}
+@keyframes blair-welcome-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (max-width: 480px) {
+  .blair-welcome {
+    bottom: 102px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blair-welcome {
+    animation: none;
+  }
+}

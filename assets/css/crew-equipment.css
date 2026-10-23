@@ -1,0 +1,226 @@
+.equipment-profile-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-underline-offset: 5px;
+}
+.crew-equipment-dialog {
+  width: min(780px, calc(100vw - 28px));
+  max-height: calc(100dvh - 40px);
+  border: 1px solid #09294e20;
+  border-radius: 22px;
+  padding: 32px;
+  background: #fffefb;
+  color: var(--ink);
+  box-shadow: 0 30px 100px #09294e35;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.crew-equipment-dialog::backdrop {
+  background: #09294e88;
+  backdrop-filter: blur(6px);
+}
+.crew-equipment-dialog[open] {
+  animation: equipment-arrive 0.22s ease-out;
+}
+.crew-equipment-dialog h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  padding-right: 80px;
+  margin: 16px 0 10px;
+}
+.crew-equipment-dialog .equipment-close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  min-height: 44px;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.equipment-intro {
+  font-size: 15px;
+  margin: 0 0 24px;
+}
+.equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.equipment-card {
+  padding: 20px;
+  border: 1px solid #09294e12;
+  border-radius: 14px;
+  background: linear-gradient(140deg, #e5f1f277, #fffefb);
+}
+.equipment-card h3 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 12px 0 8px;
+}
+.equipment-card p,
+.equipment-prep p {
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0;
+}
+.equipment-number {
+  font-size: 11px;
+  color: var(--teal);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.equipment-card-wide {
+  grid-column: 1/-1;
+}
+.equipment-prep {
+  position: static;
+  margin-top: 20px;
+  padding: 20px;
+  border: 0;
+  border-left: 3px solid #ff8b43;
+  border-radius: 0 12px 12px 0;
+  background: #f7f4ee;
+}
+.equipment-prep h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+.equipment-prep p {
+  color: var(--slate);
+}
+@keyframes equipment-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .crew-equipment-dialog {
+    padding: 24px 18px;
+    max-height: calc(100dvh - 24px);
+  }
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  .equipment-card-wide {
+    grid-column: auto;
+  }
+  .crew-equipment-dialog h2 {
+    padding-right: 60px;
+    font-size: 30px;
+  }
+  .crew-equipment-dialog .equipment-close {
+    top: 12px;
+    right: 12px;
+  }
+  .equipment-card {
+    padding: 18px;
+  }
+  .equipment-prep {
+    padding: 16px;
+  }
+  .profile-actions .equipment-profile-link {
+    flex-basis: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crew-equipment-dialog[open] {
+    animation: none;
+  }
+}
+.equipment-grid {
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.equipment-card {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  padding: 18px;
+}
+.equipment-card .equipment-picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  border-radius: 12px;
+  background: radial-gradient(ellipse at center, #e3ecea, #f5f7f3);
+  margin: 0;
+}
+.equipment-card h3 {
+  margin: 0 0 8px;
+}
+.equipment-art-note {
+  font-size: 11px;
+  color: var(--slate);
+  margin: -12px 0 22px;
+}
+.equipment-side-note {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 2px solid #e1aa7b;
+  border-radius: 0 8px 8px 0;
+  background: #f7f4ee;
+}
+.equipment-side-note h3 {
+  font-size: 13px;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+.equipment-side-note p {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.crew-equipment-dialog .equipment-close {
+  position: sticky;
+  float: right;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background: #fffefb;
+}
+@media (max-width: 600px) {
+  .equipment-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px;
+  }
+  .equipment-card .equipment-picture {
+    width: min(100%, 220px);
+    margin: 0 auto;
+  }
+  .equipment-card h3 {
+    font-size: 18px;
+  }
+  .equipment-side-note {
+    padding: 12px;
+  }
+  .equipment-art-note {
+    font-size: 11px;
+  }
+  .crew-equipment-dialog .equipment-close {
+    top: 0;
+    right: 0;
+  }
+}
+
+.equipment-card p.equipment-side-note {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--slate);
+}
+.equipment-side-note strong {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}

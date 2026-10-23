@@ -1,0 +1,249 @@
+.questions-link {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 13px;
+}
+.contact-intent {
+  border: 0;
+  padding: 0;
+  margin: 25px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.contact-intent legend {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.contact-intent label {
+  padding: 18px;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-intent label:has(input:checked) {
+  background: var(--sage);
+  border-color: var(--teal);
+}
+.contact-intent input {
+  accent-color: var(--teal);
+}
+input[readonly],
+select:disabled {
+  background: var(--ivory) !important;
+  color: var(--slate);
+}
+.date-calendar {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 20px 0;
+}
+.calendar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.calendar-toolbar h3 {
+  font-size: 22px;
+  letter-spacing: -0.025em;
+  margin: 0;
+  text-transform: capitalize;
+}
+.calendar-toolbar button {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  font-size: 25px;
+}
+.date-calendar table {
+  table-layout: fixed;
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 5px;
+  text-align: center;
+}
+.date-calendar th,
+.date-calendar td {
+  padding: 0;
+  border: 0;
+  white-space: normal;
+  font-size: 11px;
+  height: 44px;
+}
+.date-calendar thead {
+  background: transparent;
+}
+.date-calendar th {
+  color: var(--slate);
+  height: 30px;
+}
+.date-calendar td button {
+  width: 100%;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: var(--ivory);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+}
+.date-calendar td button:hover {
+  background: var(--sage);
+  color: var(--teal);
+}
+.date-calendar td button:disabled {
+  background: transparent;
+  color: #7a8787;
+  opacity: 0.65;
+  cursor: default;
+}
+.date-calendar td button.today {
+  box-shadow: inset 0 0 0 1px var(--teal);
+}
+.date-calendar td button[aria-selected="true"] {
+  background: var(--teal);
+  color: white;
+  box-shadow: 0 4px 12px #126b6825;
+}
+.date-calendar td button.has-slots:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+  margin: 2px auto 0;
+}
+.calendar-selection {
+  min-height: 24px;
+  color: var(--teal);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 14px 5px 0;
+}
+.profile-intro {
+  padding-bottom: 25px;
+}
+.profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 35px;
+}
+.owner-portrait {
+  min-height: 560px;
+  position: relative;
+  border-radius: 7px;
+  background: linear-gradient(150deg, #e4eeea, #f7f4ee 55%, #d8c4a655);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.owner-portrait img {
+  height: 560px;
+  width: 100%;
+  object-fit: cover;
+}
+.owner-portrait > div {
+  text-align: center;
+  padding: 35px;
+}
+.owner-portrait svg {
+  width: 240px;
+  max-width: 90%;
+  margin: 0 auto 25px;
+  display: block;
+}
+.portrait-path {
+  stroke: #d8c4a6;
+  stroke-width: 2;
+  stroke-dasharray: 5 6;
+  fill: none;
+}
+.portrait-drone {
+  stroke: var(--teal);
+  stroke-width: 2;
+  fill: none;
+}
+.owner-portrait h3 {
+  font-size: 28px;
+  margin: 14px 0;
+}
+.owner-story h2 {
+  font-size: clamp(32px, 4vw, 53px);
+}
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.profile-actions a {
+  font-size: 13px;
+}
+footer a[href="meet.html"] {
+  margin-left: 12px;
+}
+@media (max-width: 1050px) {
+  #menu {
+    display: block;
+    margin-left: auto;
+    padding: 8px 12px;
+  }
+  nav {
+    position: relative;
+  }
+  #links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--ivory);
+    padding: 24px 6%;
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+  }
+  #links.open {
+    display: flex;
+  }
+  nav .logo {
+    margin-right: 0;
+  }
+}
+@media (max-width: 800px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .owner-portrait {
+    min-height: 420px;
+  }
+  .owner-portrait img {
+    height: 480px;
+  }
+  .contact-intent {
+    grid-template-columns: 1fr;
+  }
+  .date-calendar {
+    padding: 18px;
+  }
+  .date-calendar table {
+    border-spacing: 3px;
+  }
+  .calendar-toolbar h3 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,10 @@
+(() => {
+  const width =
+      (document.querySelector(".owner-portrait")?.getBoundingClientRect().width || 520) *
+      Math.min(window.devicePixelRatio || 1, 3),
+    size = width <= 600 ? 600 : width <= 1200 ? 1200 : 1500;
+  window.FlyByOwner = {
+    photoUrl: "assets/rey-real-profile-" + size + ".webp",
+    photoAlt: "Rey M. with an orange drone hovering above an outstretched hand",
+  };
+})();

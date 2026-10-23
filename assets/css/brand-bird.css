@@ -1,0 +1,182 @@
+:root {
+  --brand-navy: #09294e;
+  --brand-cyan: #00a7b8;
+  --brand-orange: #ff682b;
+}
+.logo.official-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-right: auto;
+}
+.official-logo img {
+  display: block;
+  width: 76px;
+  height: 66px;
+  object-fit: contain;
+}
+header nav {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+footer .official-logo img {
+  width: 112px;
+  height: 112px;
+}
+.pip-launcher > span {
+  color: var(--brand-navy);
+}
+.pip-header {
+  background: #e5f4f4;
+}
+.pip-walker .pip-mascot,
+.pip-launcher .pip-mascot {
+  overflow: visible;
+}
+.blair-bird-feet {
+  opacity: 1;
+  transform-origin: 44px 64px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s ease;
+}
+.blair-bird-wing {
+  transform-box: view-box;
+  transform-origin: 43px 44px;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.blair-bird-far-wing {
+  transform-box: view-box;
+  transform-origin: 35px 44px;
+  transition: transform 0.4s ease;
+}
+.walking .blair-bird-feet {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.5);
+}
+.walking .blair-bird-wing {
+  animation: blair-flap 0.28s ease-in-out infinite;
+}
+.walking .blair-bird-far-wing {
+  animation: blair-flap-far 0.28s ease-in-out infinite;
+}
+.walking .blair-bird-body {
+  animation: blair-fly-bob 0.56s ease-in-out infinite;
+}
+.pointing .blair-bird-wing {
+  transform: rotate(105deg);
+}
+.waving .blair-bird-wing {
+  animation: blair-bird-wave 1.5s ease-in-out;
+}
+.blair-trail {
+  width: 23px;
+  height: 8px;
+  border-top: 1px solid #00a7b866;
+  border-bottom: 1px solid #09294e33;
+  border-radius: 50%;
+  animation: blair-wind 1.1s ease-out forwards;
+}
+.blair-trail:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  left: 4px;
+  top: 3px;
+  border-top: 1px solid #ff682b55;
+}
+.pip-guide-box {
+  border-color: var(--brand-cyan);
+}
+@keyframes blair-flap {
+  0%,
+  100% {
+    transform: rotate(-27deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(62deg) scaleY(0.6);
+  }
+}
+@keyframes blair-flap-far {
+  0%,
+  100% {
+    transform: rotate(-14deg) scaleY(0.75);
+  }
+  50% {
+    transform: rotate(55deg) scaleY(0.45);
+  }
+}
+@keyframes blair-fly-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes blair-bird-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  55%,
+  85% {
+    transform: rotate(-45deg);
+  }
+  35%,
+  70% {
+    transform: rotate(-12deg);
+  }
+}
+@keyframes blair-wind {
+  from {
+    opacity: 0.75;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(1px);
+  }
+}
+@media (max-width: 480px) {
+  .official-logo img {
+    width: 65px;
+    height: 59px;
+  }
+  header nav {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blair-bird-wing,
+  .blair-bird-far-wing,
+  .blair-bird-body {
+    animation: none !important;
+    transition: none;
+  }
+  .blair-bird-feet {
+    transition: none;
+  }
+  .walking .blair-bird-feet {
+    opacity: 1;
+    transform: none;
+  }
+  .blair-trail {
+    display: none;
+  }
+}
+.blair-paused .blair-bird-wing,
+.blair-paused .blair-bird-far-wing,
+.blair-paused .blair-bird-body {
+  animation: none !important;
+}
+
+:root {
+  --teal: #087d8d;
+  --sage: #e5f1f2;
+  --ink: #10263d;
+}

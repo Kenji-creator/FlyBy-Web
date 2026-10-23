@@ -1,0 +1,73 @@
+.language-switch {
+  display: block;
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+}
+.language-switch select {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 126px;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 30px 10px 13px;
+  border: 1px solid #09294e20;
+  border-radius: 22px;
+  background: #eaf1ed;
+  color: var(--ink, #09294e);
+  font-family: Inter, "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #09294e05;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.language-switch::after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+  color: var(--teal, #126b68);
+}
+.language-switch select:hover {
+  border-color: var(--teal, #126b68);
+}
+.language-switch select:focus-visible {
+  outline: 2px solid var(--teal, #126b68);
+  outline-offset: 3px;
+}
+.language-switch option {
+  background: white;
+  color: #09294e;
+  font-size: 14px;
+}
+@media (max-width: 480px) {
+  header nav {
+    gap: 8px;
+  }
+  .language-switch select {
+    width: 110px;
+    font-size: 11px;
+    padding: 9px 26px 9px 10px;
+  }
+  .language-switch::after {
+    right: 11px;
+  }
+  header nav > .btn {
+    font-size: 11px;
+    padding: 10px 11px;
+  }
+}

@@ -1,0 +1,442 @@
+.site-footer {
+  max-width: none;
+  margin: 50px 0 0;
+  padding: 0;
+  display: block;
+  background: linear-gradient(125deg, #eef4f2, #f5f3ed);
+  border-top: 1px solid #09294e14;
+  color: var(--ink);
+}
+.footer-main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 46px 6% 38px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.85fr 1fr;
+  gap: clamp(28px, 5vw, 70px);
+}
+.footer-brand .official-logo {
+  margin: 0 0 12px;
+}
+.footer-brand .official-logo img {
+  width: 105px;
+  height: 105px;
+}
+.footer-brand p {
+  max-width: 290px;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.footer-label {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10px !important;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 20px 0 19px !important;
+}
+.footer-nav {
+  display: grid;
+  gap: 12px;
+}
+.footer-nav a,
+.footer-question {
+  width: fit-content;
+  font-size: 14px;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.5;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+.footer-nav a:hover,
+.footer-question:hover {
+  color: var(--teal);
+  transform: translateX(3px);
+}
+.footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 280px;
+  padding: 15px 19px;
+  background: var(--brand-navy);
+  border: 1px solid var(--brand-navy);
+  border-radius: 13px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.footer-action span {
+  font-size: 22px;
+  color: #8de2e5;
+  line-height: 1;
+}
+.footer-action:hover {
+  background: #123d64;
+  transform: translateY(-2px);
+  box-shadow: 0 9px 24px #09294e15;
+  color: white;
+}
+.footer-question {
+  display: block;
+  margin-top: 17px;
+}
+.footer-base {
+  max-width: 1280px;
+  margin: auto;
+  padding: 18px 6%;
+  border-top: 1px solid #09294e14;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer-base p {
+  font-size: 11px;
+  color: var(--slate);
+  margin: 0;
+}
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer-meta a {
+  font-size: 11px;
+  color: var(--slate);
+  text-decoration: none;
+}
+.footer-meta a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.footer-mini-logo {
+  display: none;
+}
+.site-footer a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 5px;
+}
+.pip-launcher {
+  width: 80px;
+  gap: 3px;
+}
+.pip-launcher .pip-mascot {
+  width: 76px;
+  height: 76px;
+  filter: drop-shadow(0 6px 5px #09294e18);
+}
+.pip-launcher > span {
+  border: 1px solid #09294e12;
+  border-radius: 20px;
+  box-shadow: 0 3px 12px #09294e08;
+  padding: 6px 10px;
+  font-size: 10px;
+  background: #fffef9;
+}
+.pip-panel {
+  bottom: 106px;
+  border: 1px solid #09294e15;
+  border-radius: 22px;
+  box-shadow:
+    0 18px 60px #09294e1d,
+    0 3px 12px #09294e08;
+  background: #fffefb;
+}
+.pip-header {
+  background: linear-gradient(115deg, #e5f4f4, #f5f7ed);
+  padding: 21px 20px;
+  border-bottom: 1px solid #09294e08;
+}
+.pip-header h2 {
+  font-size: 20px;
+  letter-spacing: -0.04em;
+}
+.pip-header p {
+  font-size: 11px;
+}
+.pip-close {
+  background: #ffffff9c;
+  color: var(--brand-navy);
+}
+.pip-content {
+  padding: 20px;
+}
+.pip-quick button {
+  border-radius: 12px;
+  background: #edf6f5;
+  border-color: #09294e09;
+  color: var(--brand-navy);
+  font-size: 12px;
+}
+.pip-message {
+  border-radius: 16px 16px 16px 4px;
+  background: #eaf4f3;
+  padding: 15px;
+}
+.pip-user {
+  background: #f3f0e9;
+  border-radius: 14px 14px 4px 14px;
+  padding: 11px 13px;
+  margin-left: 22px;
+  color: var(--ink);
+}
+.pip-form input {
+  border-radius: 12px;
+}
+.pip-form button,
+.pip-guide-action,
+.pip-clear-chat,
+.blair-motion-toggle {
+  border-radius: 12px;
+}
+.pip-guide-box {
+  border: 1px solid #00a7b84d;
+  border-radius: 19px;
+  box-shadow: 0 18px 55px #09294e1b;
+}
+.pip-guide-controls button {
+  border-radius: 10px;
+}
+.pip-walker,
+.pip-walker .pip-mascot {
+  width: 68px;
+  height: 68px;
+}
+.blair-bird-wing {
+  transform-origin: 75px 52px;
+  transform: rotate(0deg);
+}
+.blair-bird-far-wing {
+  transform-origin: 25px 52px;
+  transform: rotate(0deg);
+}
+.blair-bird-feet {
+  transform-origin: 50px 77px;
+}
+.pointing .blair-bird-wing {
+  transform: rotate(-82deg);
+}
+.walking .blair-bird-wing {
+  animation: blair-front-flap-right 0.34s ease-in-out infinite;
+}
+.walking .blair-bird-far-wing {
+  animation: blair-front-flap-left 0.34s ease-in-out infinite;
+}
+.waving .blair-bird-wing {
+  animation: blair-front-wave 1.5s ease-in-out;
+}
+.walking .blair-perch-shadow {
+  opacity: 0.1;
+}
+.blair-perch-shadow {
+  transition: opacity 0.3s ease;
+}
+.walking .blair-bird-feet {
+  opacity: 0;
+  transform: translateY(-9px) scale(0.5);
+}
+@keyframes blair-front-flap-right {
+  0%,
+  100% {
+    transform: rotate(-80deg);
+  }
+  50% {
+    transform: rotate(-12deg);
+  }
+}
+@keyframes blair-front-flap-left {
+  0%,
+  100% {
+    transform: rotate(80deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+}
+@keyframes blair-front-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  55%,
+  85% {
+    transform: rotate(-88deg);
+  }
+  35%,
+  70% {
+    transform: rotate(-55deg);
+  }
+}
+.portfolio-screen .site-footer {
+  flex: none;
+  margin: 0;
+  background: #f2f5f0;
+}
+.portfolio-screen .footer-main {
+  display: none;
+}
+.portfolio-screen .footer-base {
+  padding: 5px 5%;
+  min-height: 38px;
+  border-top: 0;
+  gap: 10px;
+  width: 100%;
+  max-width: 1280px;
+}
+.portfolio-screen .footer-mini-logo {
+  display: flex;
+}
+.footer-mini-logo img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.portfolio-screen .footer-base p {
+  font-size: 10px;
+  flex: 1;
+}
+.portfolio-screen .footer-meta {
+  gap: 17px;
+}
+.portfolio-screen .footer-meta a {
+  font-size: 10px;
+}
+@media (max-width: 700px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-top: 30px;
+  }
+  .footer-brand {
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+  .footer-brand .official-logo {
+    margin: 0;
+  }
+  .footer-brand .official-logo img {
+    width: 88px;
+    height: 88px;
+  }
+  .footer-brand p {
+    font-size: 17px;
+    max-width: 280px;
+  }
+  .footer-label {
+    margin-top: 0 !important;
+  }
+  .footer-base {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-meta {
+    gap: 20px;
+  }
+  .site-footer {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+  }
+  .footer-brand {
+    grid-column: auto;
+    gap: 17px;
+  }
+  .footer-brand p {
+    font-size: 16px;
+  }
+  .footer-action {
+    max-width: none;
+  }
+  .footer-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .portfolio-screen .footer-meta {
+    width: auto;
+  }
+  .portfolio-screen .footer-meta a:first-child {
+    display: none;
+  }
+  .pip-launcher {
+    width: 68px;
+  }
+  .pip-launcher .pip-mascot {
+    width: 66px;
+    height: 66px;
+  }
+  .pip-panel {
+    bottom: 96px;
+  }
+  .portfolio-screen .footer-base {
+    flex-wrap: nowrap;
+    padding: 4px 4%;
+  }
+  .portfolio-screen .footer-base p {
+    font-size: 9px;
+  }
+  .footer-question {
+    margin-top: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .walking .blair-bird-wing,
+  .walking .blair-bird-far-wing,
+  .waving .blair-bird-wing {
+    animation: none !important;
+  }
+  .blair-bird-wing,
+  .blair-bird-far-wing,
+  .blair-bird-feet,
+  .blair-perch-shadow,
+  .footer-nav a,
+  .footer-question,
+  .footer-action {
+    transition: none;
+  }
+  .walking .blair-bird-feet {
+    opacity: 1;
+    transform: none;
+  }
+  .footer-action:hover,
+  .footer-nav a:hover,
+  .footer-question:hover {
+    transform: none;
+  }
+}
+.blair-paused .blair-bird-wing,
+.blair-paused .blair-bird-far-wing {
+  animation: none !important;
+}
+.footer-nav {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  position: static;
+  align-items: start;
+  justify-items: start;
+}
